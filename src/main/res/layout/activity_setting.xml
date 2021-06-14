@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivitySetting">
+
+    <!-- Header aligned to top -->
+
+    <!-- Footer aligned to bottom -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-5dp"
+        android:background="@color/eg_cyan_light"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/top_back" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_top_back"
+            android:onClick="onClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_alarm"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_top_alarm"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toStartOf="@+id/btn_menu"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/btn_top_menu"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="사용자 설정"
+            android:textColor="#FFFFFF"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_char_setting_2"
+            android:layout_width="15mm"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="@+id/imageView27"
+            app:layout_constraintTop_toTopOf="@+id/imageView27"
+            app:srcCompat="@drawable/char_setting_2" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="10mm"
+            android:layout_height="10mm"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/circle_yellow_dark"
+            android:onClick="onClick"
+            android:text="저장\n하기"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="#6AED83"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Footer"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Scrollable Content below header and above footer -->
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/eg_cyan_light"
+        android:onClick="onClick">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="1000dp">
+
+            <TextView
+                android:id="@+id/tv_area_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="* 개인 정보"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/setting_area_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_round_corner_white_filled_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_1">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.35" />
+
+                <TextView
+                    android:id="@+id/tv_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="아이디 :"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_12"
+                    app:layout_constraintEnd_toEndOf="@id/guideline"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="비밀번호 변경 :"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_13"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_11" />
+
+                <TextView
+                    android:id="@+id/tv_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="이름 :"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_14"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_12" />
+
+                <TextView
+                    android:id="@+id/tv_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="휴대폰 :"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_15"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_13" />
+
+                <TextView
+                    android:id="@+id/tv_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="아파트 :"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_16"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_14" />
+
+                <TextView
+                    android:id="@+id/tv_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="동 :"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_17"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_15" />
+
+                <TextView
+                    android:id="@+id/tv_17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="호 :"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_16" />
+
+                <TextView
+                    android:id="@+id/tv_1_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="aaa"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_1_date_password_change"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_1_date_password_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="0000-00-00 00:00:00"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_1_name"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_1_id" />
+
+                <TextView
+                    android:id="@+id/tv_1_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="홍길동"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_1_phone"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_1_date_password_change" />
+
+                <TextView
+                    android:id="@+id/tv_1_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="010-0000-0000"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_1_site"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_1_name" />
+
+                <TextView
+                    android:id="@+id/tv_1_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="독산 신도 브래뉴"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_1_dong"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_1_phone" />
+
+                <TextView
+                    android:id="@+id/tv_1_dong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="000"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_1_ho"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_1_site" />
+
+                <TextView
+                    android:id="@+id/tv_1_ho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0000"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_1_dong" />
+
+                <Button
+                    android:id="@+id/btn_change_password_setting"
+                    android:layout_width="7mm"
+                    android:layout_height="7mm"
+                    android:background="@drawable/circle_cyan_dark"
+                    android:onClick="onClick"
+                    android:text="변경\n하기"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_1_date_password_change"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                    app:layout_constraintTop_toTopOf="@+id/tv_1_date_password_change" />
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="9mm"
+                    android:layout_height="9mm"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/circle_yellow_dark"
+                    android:onClick="onClick"
+                    android:text="로그\n아웃"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline4" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.92" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_area_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="* 알림 설정"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setting_area_1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/setting_area_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_round_corner_white_filled_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_2">
+
+                <ImageButton
+                    android:id="@+id/ib_alarm_usage_at_time"
+                    android:layout_width="9mm"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_alarm"
+                    app:layout_constraintTop_toBottomOf="@+id/ib_alarm_price_level"
+                    app:srcCompat="@drawable/check_disabled_yes" />
+
+                <ImageButton
+                    android:id="@+id/ib_alarm_all"
+                    android:layout_width="12mm"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toTopOf="@+id/ib_alarm_kwh"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_alarm"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/check_disabled_yes" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_kwh_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="도달"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ib_alarm_kwh"
+                    app:layout_constraintEnd_toStartOf="@+id/ib_alarm_kwh"
+                    app:layout_constraintTop_toTopOf="@+id/ib_alarm_kwh" />
+
+                <ImageButton
+                    android:id="@+id/ib_alarm_kwh"
+                    android:layout_width="9mm"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toTopOf="@+id/ib_alarm_won"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_alarm"
+                    app:layout_constraintTop_toBottomOf="@+id/ib_alarm_all"
+                    app:srcCompat="@drawable/check_disabled_yes" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_won_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="도달"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ib_alarm_won"
+                    app:layout_constraintEnd_toStartOf="@+id/ib_alarm_won"
+                    app:layout_constraintTop_toTopOf="@+id/ib_alarm_won" />
+
+                <ImageButton
+                    android:id="@+id/ib_alarm_won"
+                    android:layout_width="9mm"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toTopOf="@+id/ib_alarm_price_level"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_alarm"
+                    app:layout_constraintTop_toBottomOf="@+id/ib_alarm_kwh"
+                    app:srcCompat="@drawable/check_disabled_yes" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_price_level_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="도달"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ib_alarm_price_level"
+                    app:layout_constraintEnd_toStartOf="@+id/ib_alarm_price_level"
+                    app:layout_constraintTop_toTopOf="@+id/ib_alarm_price_level" />
+
+                <ImageButton
+                    android:id="@+id/ib_alarm_price_level"
+                    android:layout_width="9mm"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toTopOf="@+id/ib_alarm_usage_at_time"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_alarm"
+                    app:layout_constraintTop_toBottomOf="@+id/ib_alarm_won"
+                    app:srcCompat="@drawable/check_disabled_yes" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_usage_at_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="사용량 보고"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/btn_alarm_usage"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_alarm_usage" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="28dp"
+                    android:text="알림 전체"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ib_alarm_all"
+                    app:layout_constraintEnd_toStartOf="@+id/ib_alarm_all"
+                    app:layout_constraintTop_toTopOf="@+id/ib_alarm_all" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.92" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_kwh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="사용량 (kWh)"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/et_alarm_kwh"
+                    app:layout_constraintEnd_toStartOf="@+id/et_alarm_kwh" />
+
+                <EditText
+                    android:id="@+id/et_alarm_kwh"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:inputType="textPersonName"
+                    android:text="000.0"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_alarm_kwh_end"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_alarm_kwh_end" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_won"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="사용요금 (원)"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/et_alarm_won"
+                    app:layout_constraintEnd_toStartOf="@+id/et_alarm_won" />
+
+                <EditText
+                    android:id="@+id/et_alarm_won"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:inputType="textPersonName"
+                    android:text="00,000"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_alarm_won_end"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_alarm_won_end" />
+
+                <TextView
+                    android:id="@+id/tv_alarm_price_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="다음 누진등급 (%)"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/et_alarm_price_level"
+                    app:layout_constraintEnd_toStartOf="@+id/et_alarm_price_level" />
+
+                <EditText
+                    android:id="@+id/et_alarm_price_level"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:ems="10"
+                    android:gravity="right"
+                    android:inputType="textPersonName"
+                    android:text="00"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_alarm_price_level_end"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_alarm_price_level_end" />
+
+                <Button
+                    android:id="@+id/btn_alarm_usage"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/shape_round_corner_dark_cyan_hollow"
+                    android:onClick="onClick"
+                    android:text="매월1일 9AM"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ib_alarm_usage_at_time"
+                    app:layout_constraintEnd_toStartOf="@+id/ib_alarm_usage_at_time"
+                    app:layout_constraintTop_toTopOf="@+id/ib_alarm_usage_at_time" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_area_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="* 요금관련 설정"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setting_area_2" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="(세대 대표자만 설정 가능합니다)"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_area_3"
+                app:layout_constraintStart_toEndOf="@+id/tv_area_3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/setting_area_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_round_corner_white_filled_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_3">
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="대가족/생명유지장치 요금"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sp_discount_family"
+                    app:layout_constraintEnd_toStartOf="@+id/sp_discount_family"
+                    app:layout_constraintTop_toTopOf="@+id/sp_discount_family" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="복지 할인"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sp_discount_social"
+                    app:layout_constraintEnd_toStartOf="@+id/sp_discount_social"
+                    app:layout_constraintTop_toTopOf="@+id/sp_discount_social" />
+
+                <Spinner
+                    android:id="@+id/sp_discount_family"
+                    style="@android:style/Widget.Material.Light.Spinner"
+                    android:layout_width="25mm"
+                    android:layout_height="6mm"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/shape_round_corner_light_cyan_hollow"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/sp_discount_social"
+                    style="@android:style/Widget.Material.Light.Spinner"
+                    android:layout_width="25mm"
+                    android:layout_height="6mm"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/shape_round_corner_light_cyan_hollow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_discount_family" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_area_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="* 우리 아파트 정보"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setting_area_3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/setting_area_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_round_corner_white_filled_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_4">
+
+                <TextView
+                    android:id="@+id/tv_site_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="단지명 : 독산 신도브래뉴" />
+
+                <TextView
+                    android:id="@+id/tv_read_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/eg_cyan_light"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_site_name"
+                    tools:text="우리 아파트 검침일 : 매달 1일" />
+
+                <TextView
+                    android:id="@+id/tv_read_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_read_day"
+                    tools:text="* 요금 계산 기간 : 지난달 10일 ~ 이번달 9일" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_area_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="* 세대 사용자 정보"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setting_area_4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/setting_area_5"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_round_corner_white_filled_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_5">
+
+                <ListView
+                    android:id="@+id/lv_family"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,275 @@
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:24
+-keep class android.support.v4.app.CoreComponentFactory { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:127
+-keep class com.enernet.eg.ActionReceiver { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:24
+-keep class com.enernet.eg.CaApplication { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:138
+-keep class com.enernet.eg.GCMIntentService { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:129
+-keep class com.enernet.eg.ServicePush { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:91
+-keep class com.enernet.eg.activity.ActivityAck { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:57
+-keep class com.enernet.eg.activity.ActivityAlarm { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:100
+-keep class com.enernet.eg.activity.ActivityAuth { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:97
+-keep class com.enernet.eg.activity.ActivityCandidate { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:82
+-keep class com.enernet.eg.activity.ActivityChangePasswordAuth { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:79
+-keep class com.enernet.eg.activity.ActivityChangePasswordInput { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:42
+-keep class com.enernet.eg.activity.ActivityFaq { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:112
+-keep class com.enernet.eg.activity.ActivityLogin { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:45
+-keep class com.enernet.eg.activity.ActivityNotice { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:54
+-keep class com.enernet.eg.activity.ActivityNoticeList { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:48
+-keep class com.enernet.eg.activity.ActivityPoint { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:39
+-keep class com.enernet.eg.activity.ActivityQna { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:51
+-keep class com.enernet.eg.activity.ActivityQnaList { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:36
+-keep class com.enernet.eg.activity.ActivityQuestion { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:60
+-keep class com.enernet.eg.activity.ActivitySetting { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:63
+-keep class com.enernet.eg.activity.ActivitySiteState { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:103
+-keep class com.enernet.eg.activity.ActivitySplash { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:94
+-keep class com.enernet.eg.activity.ActivitySubscribe { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:88
+-keep class com.enernet.eg.activity.ActivitySubscribedMain { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:85
+-keep class com.enernet.eg.activity.ActivitySubscribedSub { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:75
+-keep class com.enernet.eg.activity.ActivityUsage { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:72
+-keep class com.enernet.eg.activity.ActivityUsageDaily { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:69
+-keep class com.enernet.eg.activity.ActivityUsageMonthly { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:66
+-keep class com.enernet.eg.activity.ActivityUsageYearly { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:33
+-keep class com.enernet.eg.activity.ActivityWeb { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:189
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:199
+-keep class com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:213
+-keep class com.google.android.gms.measurement.AppMeasurementJobService { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:194
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:209
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:152
+-keep class com.google.firebase.components.ComponentDiscoveryService { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:163
+-keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:175
+-keep class com.google.firebase.iid.FirebaseInstanceIdService { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:145
+-keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\build\intermediates\merged_manifests\release\AndroidManifest.xml:183
+-keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\loading_layout.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_year_picker.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_year_month_picker.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_year_month_day_picker.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_usage_alarm_option.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_list_item_qna.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_list_item_notice.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_list_item_faq.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_list_item_family.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_list_item_alarm.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\eg_list_header_family.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\dialog_logout.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\dialog_alarm_ack.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\dialog_alarm.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\dialog02.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\dialog01yn.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\dialog01.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_web.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_yearly.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_monthly.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_daily.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_subscribed_sub.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_subscribed_main.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_subscribe.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_splash.xml:1
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_site_state.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_setting.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_question.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_qna_list.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_qna.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_point.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_notice_list.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_notice.xml:12
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_login.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_faq.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_change_password_input.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_change_password_auth.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_candidate.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_auth.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_alarm.xml:2
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_ack.xml:2
+-keep class android.support.constraint.ConstraintLayout { <init>(...); }
+
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_setting.xml:167
+-keep class android.support.constraint.Guideline { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\design_bottom_navigation_item.xml:27
+-keep class android.support.design.internal.BaselineLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\design_navigation_item.xml:17
+-keep class android.support.design.internal.NavigationMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\design_navigation_menu.xml:17
+-keep class android.support.design.internal.NavigationMenuView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\design_text_input_password_icon.xml:18
+-keep class android.support.design.widget.CheckableImageButton { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\design_bottom_sheet_dialog.xml:26
+-keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\mtrl_layout_snackbar.xml:18
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\design_layout_snackbar.xml:18
+-keep class android.support.design.widget.Snackbar$SnackbarLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\mtrl_layout_snackbar_include.xml:18
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\858de26076dd0a6d6ab095ca5abc9fa3\design-28.0.0\res\layout\design_layout_snackbar_include.xml:18
+-keep class android.support.design.widget.SnackbarContentLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_fits_not.xml:2
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer.xml:2
+-keep class android.support.v4.widget.DrawerLayout { <init>(...); }
+
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\content_activity_usage.xml:2
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_alert_dialog_material.xml:41
+-keep class android.support.v4.widget.NestedScrollView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_select_dialog_material.xml:23
+-keep class android.support.v7.app.AlertController$RecycleListView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_action_menu_item_layout.xml:17
+-keep class android.support.v7.view.menu.ActionMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_expanded_menu_layout.xml:17
+-keep class android.support.v7.view.menu.ExpandedMenuView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_popup_menu_item_layout.xml:17
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_list_menu_item_layout.xml:17
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_cascading_menu_item_layout.xml:20
+-keep class android.support.v7.view.menu.ListMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_toolbar.xml:27
+-keep class android.support.v7.widget.ActionBarContainer { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_toolbar.xml:43
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_action_mode_bar.xml:19
+-keep class android.support.v7.widget.ActionBarContextView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_toolbar.xml:17
+-keep class android.support.v7.widget.ActionBarOverlayLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_action_menu_layout.xml:17
+-keep class android.support.v7.widget.ActionMenuView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_activity_chooser_view.xml:19
+-keep class android.support.v7.widget.ActivityChooserView$InnerLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_alert_dialog_material.xml:18
+-keep class android.support.v7.widget.AlertDialogLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_alert_dialog_button_bar_material.xml:26
+-keep class android.support.v7.widget.ButtonBarLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_content_include.xml:19
+-keep class android.support.v7.widget.ContentFrameLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_alert_dialog_title_material.xml:45
+-keep class android.support.v7.widget.DialogTitle { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_simple_overlay_action_mode.xml:23
+-keep class android.support.v7.widget.FitWindowsFrameLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_simple.xml:17
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_dialog_title_material.xml:22
+-keep class android.support.v7.widget.FitWindowsLinearLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_recycler_view.xml:2
+-keep class android.support.v7.widget.RecyclerView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_search_view.xml:75
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_item_switch.xml:58
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_item_secondary_switch.xml:58
+-keep class android.support.v7.widget.SwitchCompat { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_toolbar.xml:36
+-keep class android.support.v7.widget.Toolbar { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_simple_overlay_action_mode.xml:32
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_screen_simple.xml:25
+-keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_alert_dialog_title_material.xml:56
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_alert_dialog_material.xml:52
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\0fc5a084e0d7751087b85d25b1eebc4c\appcompat-v7-28.0.0\res\layout\abc_alert_dialog_button_bar_material.xml:43
+-keep class android.widget.Space { <init>(...); }
+
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_test.xml:11
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_notice_list.xml:97
+-keep class com.enernet.eg.ListViewInfinite { <init>(...); }
+
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_yearly.xml:244
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_monthly.xml:242
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_daily.xml:242
+-keep class com.github.mikephil.charting.charts.HorizontalBarChart { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_item_profile.xml:22
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_item_mini_profile.xml:6
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_header.xml:17
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_compact_header.xml:18
+-keep class com.mikepenz.materialdrawer.view.BezelImageView { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\80b35b98f0e3bebbe5cf2ca2a5639502\materialize-1.1.2\res\layout\materialize.xml:5
+-keep class com.mikepenz.materialize.view.ScrimInsetsFrameLayout { <init>(...); }
+
+# Referenced at C:\Users\shpark\.gradle\caches\transforms-2\files-2.1\98852c8562924ffb08eddc08e9471b31\materialdrawer-6.0.9\res\layout\material_drawer_slider.xml:2
+-keep class com.mikepenz.materialize.view.ScrimInsetsRelativeLayout { <init>(...); }
+
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_web.xml:51
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_yearly.xml:35
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_monthly.xml:33
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage_daily.xml:33
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_usage.xml:34
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_subscribed_sub.xml:41
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_subscribed_main.xml:42
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_subscribe.xml:62
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_site_state.xml:32
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_setting.xml:32
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_question.xml:35
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_qna_list.xml:62
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_qna.xml:32
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_point.xml:32
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_notice_list.xml:64
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_notice.xml:32
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_login.xml:48
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_faq.xml:51
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_change_password_input.xml:59
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_change_password_auth.xml:63
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_candidate.xml:10
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_alarm.xml:63
+# Referenced at D:\AndroidStudioProjects\EnerEg\app\src\main\res\layout\activity_ack.xml:23
+-keepclassmembers class * { *** onClick(android.view.View); }
+

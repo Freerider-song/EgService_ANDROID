@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="7mm"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="이름"
+        android:textColor="@color/eg_cyan_dark"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_phone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="17mm"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="전화번호"
+        android:textColor="@color/eg_cyan_dark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        app:layout_constraintEnd_toStartOf="@+id/tv_time_last_login"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_time_last_login"
+        android:layout_width="18mm"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="최근 로그인"
+        android:textColor="@color/eg_cyan_dark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_phone"
+        app:layout_constraintEnd_toStartOf="@+id/tv_ack"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_phone"
+        app:layout_constraintTop_toTopOf="@+id/tv_phone" />
+
+    <TextView
+        android:id="@+id/tv_ack"
+        android:layout_width="7mm"
+        android:layout_height="7mm"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="승인"
+        android:textColor="@color/eg_cyan_dark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_time_last_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_time_last_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_time_last_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

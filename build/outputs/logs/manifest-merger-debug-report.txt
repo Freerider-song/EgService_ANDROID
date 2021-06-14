@@ -1,0 +1,769 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+MERGED from [com.mikepenz:materialdrawer:6.0.9] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\a651c87a4aebba4f42756f78559f8179\jetified-materialdrawer-6.0.9\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\8217e57fbe1dbe600c663357aa3f5fcd\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-core:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\a16d1d835944c10ab38bb0a71c49917d\jetified-firebase-core-17.4.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:17:1-45:12
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\8b0507f939337bd7122958f34ef85c57\jetified-fastadapter-extensions-expandable-3.2.8\AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:fastadapter-commons:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\db002130a0948597fc6a2b130bc1a005\jetified-fastadapter-commons-3.2.8\AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:fastadapter:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\01ee4b27afec93156ca5037d2064517a\jetified-fastadapter-3.2.8\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\09eb52732629035cf88c3a037ba2eeda\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e16ee59961f1935b0a28b6669a339511\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.mikepenz:iconics-core:3.0.4] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\37bdad2c376939dbdd0ead7496e6fa90\jetified-iconics-core-3.0.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9bc18e77421bafe6eb07ab75cf396f17\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\87ee8226fa2f4843e8d02c0bc266e215\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\bf5452c93ccfdedc1a4bbe0b5c07f277\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4745b732546c5b6d913257b4a45e37d7\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7aa900a9a80c554652886022cb660d40\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\36e0dd79fc46a0f047aaaaaf01614493\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\31861b1508e0fdb596f3599573c7226c\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\81bb2292005e9d10379df9509d13d347\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-analytics:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\737e6a7682056e10b9bf4fdb64011077\jetified-firebase-analytics-17.4.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\fef3153900d835feac1acfd1471fc9d3\jetified-play-services-measurement-sdk-17.4.2\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\bb7ba53dfe98c571a22db93cab3c258b\jetified-play-services-stats-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\cd95e365de9297d8e66b2d84f5d5ebd6\jetified-firebase-installations-interop-16.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e4ecf7b52c07bd02f5749de27bf8c3ee\jetified-firebase-iid-interop-17.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\c8be356ba878e10477095089a4767dc4\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5a1455d6a18174edae077de5d440a502\jetified-firebase-measurement-connector-18.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\b503ed638394ee455ceb6adddbfc5a73\jetified-play-services-measurement-base-17.4.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\82f98adc3883c200461d719185ac30f4\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2729107665cbf39eca7b15a8664a9329\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\77e9e1cd6279a3646f4aead7f3281662\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\d9bc20a2f93dd514cceef86a508f3cf1\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5e6cdcaa9e9195c01ab4e2ae67e470dc\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e62d4df0d49cb7dc16b36ab44782962e\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\61384fbcf9d8b35faaed747dcb26334e\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\59ddfc42c2fc34892a87867c6da9aef5\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dc58d821b460929b25c4d618b50203b8\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f707edbbae6e295390b24db09a292554\core-1.1.0\AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\768369172d5343927abee76505ab3fba\jetified-firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-encoders-json:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4b4a20f7aabfed4ec92e62f6e0745138\jetified-firebase-encoders-json-16.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\155cded7f4ce91d23d137102650d518d\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\0b0c59f4fdb6098fdf98ee0dddfbc831\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\00a8708bcfdb20373193bc6ce179cbae\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\fe079412e0325128ba96f0726b76e58e\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\ad18e3b7f1e3e31e8c7e16588ebc4ee8\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2d72222f621b5352f98dc644f7eb6590\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4ac49da8150f793fe67df3f2ba673898\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\40a4e3c0e92cdb10506b129d047135de\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\c19cffcd66165c2ad9453312dd9cd170\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f0e90c99bc04d525d8dfe0d0832a6a45\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\35ad568931baa247d320aab11dc03603\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6a1411b6e2322c8266fd7d1260352556\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\21b702bbda700fa8c0617b4824d6af9b\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.mikepenz:materialize:1.1.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\35ab06b5f29074039e4d5b43fc32ffa2\jetified-materialize-1.1.2\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\ee7833c11c0906ea11c63660f999b377\jetified-transport-api-2.2.0\AndroidManifest.xml:15:1-22:12
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+	package
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:4:5-29
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:1-154:12
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:2:11-69
+	tools:ignore
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:5:5-44
+uses-permission#android.permission.READ_PHONE_NUMBERS
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:7:5-77
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:7:22-74
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:8:5-75
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:8:22-72
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:9:5-72
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:9:22-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:10:22-64
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:11:22-68
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:12:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:12:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:14:22-78
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:15:22-78
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:16:5-77
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:16:22-74
+uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:17:5-94
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:17:22-92
+application
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:19:5-152:19
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\8217e57fbe1dbe600c663357aa3f5fcd\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\8217e57fbe1dbe600c663357aa3f5fcd\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-core:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\a16d1d835944c10ab38bb0a71c49917d\jetified-firebase-core-17.4.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\a16d1d835944c10ab38bb0a71c49917d\jetified-firebase-core-17.4.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:22:5-43:19
+MERGED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:22:5-43:19
+MERGED from [com.google.firebase:firebase-analytics:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\737e6a7682056e10b9bf4fdb64011077\jetified-firebase-analytics-17.4.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\737e6a7682056e10b9bf4fdb64011077\jetified-firebase-analytics-17.4.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\fef3153900d835feac1acfd1471fc9d3\jetified-play-services-measurement-sdk-17.4.2\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\fef3153900d835feac1acfd1471fc9d3\jetified-play-services-measurement-sdk-17.4.2\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\bb7ba53dfe98c571a22db93cab3c258b\jetified-play-services-stats-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\bb7ba53dfe98c571a22db93cab3c258b\jetified-play-services-stats-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e4ecf7b52c07bd02f5749de27bf8c3ee\jetified-firebase-iid-interop-17.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e4ecf7b52c07bd02f5749de27bf8c3ee\jetified-firebase-iid-interop-17.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\c8be356ba878e10477095089a4767dc4\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\c8be356ba878e10477095089a4767dc4\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5a1455d6a18174edae077de5d440a502\jetified-firebase-measurement-connector-18.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5a1455d6a18174edae077de5d440a502\jetified-firebase-measurement-connector-18.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\b503ed638394ee455ceb6adddbfc5a73\jetified-play-services-measurement-base-17.4.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\b503ed638394ee455ceb6adddbfc5a73\jetified-play-services-measurement-base-17.4.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\82f98adc3883c200461d719185ac30f4\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\82f98adc3883c200461d719185ac30f4\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2729107665cbf39eca7b15a8664a9329\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2729107665cbf39eca7b15a8664a9329\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f707edbbae6e295390b24db09a292554\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f707edbbae6e295390b24db09a292554\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:25:5-39:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\0b0c59f4fdb6098fdf98ee0dddfbc831\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\0b0c59f4fdb6098fdf98ee0dddfbc831\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\21b702bbda700fa8c0617b4824d6af9b\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\21b702bbda700fa8c0617b4824d6af9b\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f707edbbae6e295390b24db09a292554\core-1.1.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:23:9-41
+	android:largeHeap
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:24:9-33
+	android:icon
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:22:9-43
+	android:allowBackup
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:21:9-36
+	android:theme
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:25:9-52
+	android:usesCleartextTraffic
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:26:9-45
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:20:9-52
+activity#com.enernet.eg.activity.ActivityWeb
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:27:9-28:51
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:28:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:27:19-69
+activity#com.enernet.eg.activity.ActivityQuestion
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:29:9-31:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:31:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:30:13-68
+activity#com.enernet.eg.activity.ActivityQna
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:32:9-34:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:34:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:33:13-63
+activity#com.enernet.eg.activity.ActivityFaq
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:35:9-37:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:37:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:36:13-63
+activity#com.enernet.eg.activity.ActivityNotice
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:38:9-40:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:40:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:39:13-66
+activity#com.enernet.eg.activity.ActivityPoint
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:41:9-43:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:43:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:42:13-65
+activity#com.enernet.eg.activity.ActivityQnaList
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:44:9-46:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:46:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:45:13-67
+activity#com.enernet.eg.activity.ActivityNoticeList
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:47:9-49:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:49:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:48:13-70
+activity#com.enernet.eg.activity.ActivityAlarm
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:50:9-52:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:52:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:51:13-65
+activity#com.enernet.eg.activity.ActivitySetting
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:53:9-55:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:55:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:54:13-67
+activity#com.enernet.eg.activity.ActivitySiteState
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:56:9-58:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:58:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:57:13-69
+activity#com.enernet.eg.activity.ActivityUsageYearly
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:59:9-61:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:61:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:60:13-71
+activity#com.enernet.eg.activity.ActivityUsageMonthly
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:62:9-64:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:64:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:63:13-72
+activity#com.enernet.eg.activity.ActivityUsageDaily
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:65:9-67:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:67:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:66:13-70
+activity#com.enernet.eg.activity.ActivityUsage
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:68:9-71:71
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:70:13-49
+	android:theme
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:71:13-68
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:69:13-65
+activity#com.enernet.eg.activity.ActivityChangePasswordInput
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:72:9-74:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:74:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:73:13-79
+activity#com.enernet.eg.activity.ActivityChangePasswordAuth
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:75:9-77:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:77:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:76:13-78
+activity#com.enernet.eg.activity.ActivitySubscribedSub
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:78:9-80:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:80:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:79:13-73
+activity#com.enernet.eg.activity.ActivitySubscribedMain
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:81:9-83:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:83:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:82:13-74
+activity#com.enernet.eg.activity.ActivityAck
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:84:9-86:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:86:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:85:13-63
+activity#com.enernet.eg.activity.ActivitySubscribe
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:87:9-89:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:89:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:88:13-69
+activity#com.enernet.eg.activity.ActivityCandidate
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:90:9-92:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:92:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:91:13-69
+activity#com.enernet.eg.activity.ActivityAuth
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:93:9-95:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:95:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:94:13-64
+activity#com.enernet.eg.activity.ActivitySplash
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:96:9-104:20
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:98:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:97:13-66
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:99:13-103:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:100:17-69
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:100:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:102:17-77
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:102:27-74
+activity#com.enernet.eg.activity.ActivityLogin
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:105:9-107:52
+	android:screenOrientation
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:107:13-49
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:106:13-65
+receiver#com.enernet.eg.ActionReceiver
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:120:9-66
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:120:19-63
+receiver#com.enernet.eg.ReceiverAlarm
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:121:9-65
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:121:19-62
+receiver#com.enernet.eg.ReceiverReboot
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:122:9-130:20
+	android:process
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:126:13-38
+	android:enabled
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:124:13-35
+	android:exported
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:125:13-37
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:123:13-57
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:127:13-129:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:128:17-79
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:128:25-76
+service#com.enernet.eg.ServicePush
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:132:9-140:19
+	android:enabled
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:134:13-35
+	android:exported
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:135:13-36
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:133:13-54
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT+action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:136:13-139:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:137:17-78
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:137:25-75
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:138:17-80
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:138:25-77
+service#com.enernet.eg.ServiceRestarter
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:142:9-145:39
+	android:enabled
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:144:13-35
+	android:exported
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:145:13-36
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:143:13-59
+service#com.enernet.eg.ServiceMonitor
+ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:147:9-150:39
+	android:enabled
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:149:13-35
+	android:exported
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:150:13-36
+	android:name
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:148:13-57
+uses-sdk
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+MERGED from [com.mikepenz:materialdrawer:6.0.9] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\a651c87a4aebba4f42756f78559f8179\jetified-materialdrawer-6.0.9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:materialdrawer:6.0.9] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\a651c87a4aebba4f42756f78559f8179\jetified-materialdrawer-6.0.9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\8217e57fbe1dbe600c663357aa3f5fcd\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\8217e57fbe1dbe600c663357aa3f5fcd\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\a16d1d835944c10ab38bb0a71c49917d\jetified-firebase-core-17.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\a16d1d835944c10ab38bb0a71c49917d\jetified-firebase-core-17.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\8b0507f939337bd7122958f34ef85c57\jetified-fastadapter-extensions-expandable-3.2.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter-extensions-expandable:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\8b0507f939337bd7122958f34ef85c57\jetified-fastadapter-extensions-expandable-3.2.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter-commons:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\db002130a0948597fc6a2b130bc1a005\jetified-fastadapter-commons-3.2.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter-commons:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\db002130a0948597fc6a2b130bc1a005\jetified-fastadapter-commons-3.2.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\01ee4b27afec93156ca5037d2064517a\jetified-fastadapter-3.2.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:fastadapter:3.2.8] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\01ee4b27afec93156ca5037d2064517a\jetified-fastadapter-3.2.8\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\09eb52732629035cf88c3a037ba2eeda\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\09eb52732629035cf88c3a037ba2eeda\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e16ee59961f1935b0a28b6669a339511\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e16ee59961f1935b0a28b6669a339511\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.mikepenz:iconics-core:3.0.4] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\37bdad2c376939dbdd0ead7496e6fa90\jetified-iconics-core-3.0.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:iconics-core:3.0.4] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\37bdad2c376939dbdd0ead7496e6fa90\jetified-iconics-core-3.0.4\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9bc18e77421bafe6eb07ab75cf396f17\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9bc18e77421bafe6eb07ab75cf396f17\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\87ee8226fa2f4843e8d02c0bc266e215\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\87ee8226fa2f4843e8d02c0bc266e215\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\bf5452c93ccfdedc1a4bbe0b5c07f277\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\bf5452c93ccfdedc1a4bbe0b5c07f277\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4745b732546c5b6d913257b4a45e37d7\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4745b732546c5b6d913257b4a45e37d7\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7aa900a9a80c554652886022cb660d40\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7aa900a9a80c554652886022cb660d40\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\36e0dd79fc46a0f047aaaaaf01614493\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\36e0dd79fc46a0f047aaaaaf01614493\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\31861b1508e0fdb596f3599573c7226c\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\31861b1508e0fdb596f3599573c7226c\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\81bb2292005e9d10379df9509d13d347\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\81bb2292005e9d10379df9509d13d347\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-analytics:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\737e6a7682056e10b9bf4fdb64011077\jetified-firebase-analytics-17.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\737e6a7682056e10b9bf4fdb64011077\jetified-firebase-analytics-17.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\fef3153900d835feac1acfd1471fc9d3\jetified-play-services-measurement-sdk-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\fef3153900d835feac1acfd1471fc9d3\jetified-play-services-measurement-sdk-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\bb7ba53dfe98c571a22db93cab3c258b\jetified-play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\bb7ba53dfe98c571a22db93cab3c258b\jetified-play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\cd95e365de9297d8e66b2d84f5d5ebd6\jetified-firebase-installations-interop-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-installations-interop:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\cd95e365de9297d8e66b2d84f5d5ebd6\jetified-firebase-installations-interop-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e4ecf7b52c07bd02f5749de27bf8c3ee\jetified-firebase-iid-interop-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e4ecf7b52c07bd02f5749de27bf8c3ee\jetified-firebase-iid-interop-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\c8be356ba878e10477095089a4767dc4\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\c8be356ba878e10477095089a4767dc4\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5a1455d6a18174edae077de5d440a502\jetified-firebase-measurement-connector-18.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5a1455d6a18174edae077de5d440a502\jetified-firebase-measurement-connector-18.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\af970d28443d3ce456736726beaf1da7\jetified-play-services-measurement-sdk-api-17.4.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\b503ed638394ee455ceb6adddbfc5a73\jetified-play-services-measurement-base-17.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\b503ed638394ee455ceb6adddbfc5a73\jetified-play-services-measurement-base-17.4.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\82f98adc3883c200461d719185ac30f4\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\82f98adc3883c200461d719185ac30f4\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2729107665cbf39eca7b15a8664a9329\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2729107665cbf39eca7b15a8664a9329\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\77e9e1cd6279a3646f4aead7f3281662\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\77e9e1cd6279a3646f4aead7f3281662\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\d9bc20a2f93dd514cceef86a508f3cf1\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\d9bc20a2f93dd514cceef86a508f3cf1\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5e6cdcaa9e9195c01ab4e2ae67e470dc\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5e6cdcaa9e9195c01ab4e2ae67e470dc\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e62d4df0d49cb7dc16b36ab44782962e\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\e62d4df0d49cb7dc16b36ab44782962e\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\61384fbcf9d8b35faaed747dcb26334e\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\61384fbcf9d8b35faaed747dcb26334e\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\59ddfc42c2fc34892a87867c6da9aef5\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\59ddfc42c2fc34892a87867c6da9aef5\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dc58d821b460929b25c4d618b50203b8\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dc58d821b460929b25c4d618b50203b8\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f707edbbae6e295390b24db09a292554\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f707edbbae6e295390b24db09a292554\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\768369172d5343927abee76505ab3fba\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\768369172d5343927abee76505ab3fba\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4b4a20f7aabfed4ec92e62f6e0745138\jetified-firebase-encoders-json-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:16.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4b4a20f7aabfed4ec92e62f6e0745138\jetified-firebase-encoders-json-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\155cded7f4ce91d23d137102650d518d\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\155cded7f4ce91d23d137102650d518d\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\0b0c59f4fdb6098fdf98ee0dddfbc831\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\0b0c59f4fdb6098fdf98ee0dddfbc831\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\00a8708bcfdb20373193bc6ce179cbae\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\00a8708bcfdb20373193bc6ce179cbae\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\fe079412e0325128ba96f0726b76e58e\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\fe079412e0325128ba96f0726b76e58e\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\ad18e3b7f1e3e31e8c7e16588ebc4ee8\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\ad18e3b7f1e3e31e8c7e16588ebc4ee8\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2d72222f621b5352f98dc644f7eb6590\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2d72222f621b5352f98dc644f7eb6590\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4ac49da8150f793fe67df3f2ba673898\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4ac49da8150f793fe67df3f2ba673898\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\40a4e3c0e92cdb10506b129d047135de\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\40a4e3c0e92cdb10506b129d047135de\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\c19cffcd66165c2ad9453312dd9cd170\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\c19cffcd66165c2ad9453312dd9cd170\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f0e90c99bc04d525d8dfe0d0832a6a45\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\f0e90c99bc04d525d8dfe0d0832a6a45\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\35ad568931baa247d320aab11dc03603\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\35ad568931baa247d320aab11dc03603\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6a1411b6e2322c8266fd7d1260352556\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6a1411b6e2322c8266fd7d1260352556\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\21b702bbda700fa8c0617b4824d6af9b\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\21b702bbda700fa8c0617b4824d6af9b\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.mikepenz:materialize:1.1.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\35ab06b5f29074039e4d5b43fc32ffa2\jetified-materialize-1.1.2\AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:materialize:1.1.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\35ab06b5f29074039e4d5b43fc32ffa2\jetified-materialize-1.1.2\AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\ee7833c11c0906ea11c63660f999b377\jetified-transport-api-2.2.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\ee7833c11c0906ea11c63660f999b377\jetified-transport-api-2.2.0\AndroidManifest.xml:18:5-20:41
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:28:9-35:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:31:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:30:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:29:13-82
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:32:13-34:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:32:28-51
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:36:9-42:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:25:9-31:19
+MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:25:9-31:19
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:38:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:37:13-84
+meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
+ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:39:13-41:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:41:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:40:17-119
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:31:17-139
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:42:25-78
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9148ce6949d8593e031a63e0583550b5\jetified-play-services-measurement-impl-17.4.2\AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:30:13-85
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:35:9-38:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:36:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:39:9-43:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:40:13-87
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:18:17-127
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5daf4cf9fc8aecc208e12f3f7f34d2d5\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2729107665cbf39eca7b15a8664a9329\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2729107665cbf39eca7b15a8664a9329\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\2729107665cbf39eca7b15a8664a9329\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132

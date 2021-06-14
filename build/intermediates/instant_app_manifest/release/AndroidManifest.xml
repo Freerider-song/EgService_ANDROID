@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.enernet.eg"
+    android:targetSandboxVersion="2"
+    android:versionCode="10"
+    android:versionName="0.9.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name="com.enernet.eg.CaApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:icon="@drawable/icon_main"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="false" >
+        <activity
+            android:name="com.enernet.eg.activity.ActivityWeb"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityQuestion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityQna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityFaq"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityNotice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityPoint"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityQnaList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityNoticeList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityAlarm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivitySetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivitySiteState"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityUsageYearly"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityUsageMonthly"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityUsageDaily"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityUsage"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityChangePasswordInput"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityChangePasswordAuth"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivitySubscribedSub"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivitySubscribedMain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityAck"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivitySubscribe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityCandidate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivityAuth"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.enernet.eg.activity.ActivitySplash"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.enernet.eg.activity.ActivityLogin"
+            android:screenOrientation="portrait" />
+        <!--
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="hemsms" />
+            </intent-filter>
+        </receiver>
+        -->
+        <receiver android:name="com.enernet.eg.ActionReceiver" />
+
+        <service
+            android:name="com.enernet.eg.ServicePush"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.enernet.eg.GCMIntentService"
+            android:enabled="true" />
+        <!--
+             FirebaseMessagingService performs security checks at runtime,
+             but set to not exported to explicitly avoid allowing another app to call it.
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <!--
+             FirebaseInstanceIdService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.enernet.eg.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+    </application>
+
+</manifest>

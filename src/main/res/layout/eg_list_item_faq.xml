@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/area_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_round_corner_white_filled_3"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_up_down"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_brown_up" />
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="none"
+        android:singleLine="false"
+        android:textColor="@color/eg_brown"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_answer"
+        app:layout_constraintEnd_toStartOf="@+id/iv_up_down"
+        app:layout_constraintStart_toEndOf="@+id/iv_faq_head"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="박상현" />
+
+    <ImageView
+        android:id="@+id/iv_faq_head"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/faq_head" />
+
+    <TextView
+        android:id="@+id/tv_answer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:lineSpacingExtra="5sp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textColor="@color/foreground1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="원격검침시스템이란 공동주택이나 사무실 등에 설치된 전기, 가스, 수도, 온수, 열량 등 각종 계량기의 사용량을 검침 원이 직접 세대를 방문하지 않고 원격지의 검침센터(관리사무소)에서 자동으로 검침하고, 검침 컴퓨터로 데이터를 편리하게 검색하고 출력할 수 있는 시스템 입니다."
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

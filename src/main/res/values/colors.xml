@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="title_background">#ff008000</color>
+    <color name="title_text">#FFFFFF</color>
+    <color name="title_text_alt">#ff000000</color>
+    <color name="title_separator">#40ffffff</color>
+    
+    <color name="foreground1">#355689</color>
+    <color name="foreground2">#ff7081a3</color>
+    <color name="background1">#ffffffff</color>
+    <color name="background2">#ffd5ddeb</color>
+    <color name="background3">#ffe3e8f1</color>
+    
+	<color name="white">#FFFFFF</color>
+	<color name="black">#000000</color>
+	<color name="gray">#ff969696</color>
+	<color name="aqua">#29A6E0</color>
+	<color name="red">#ffff0000</color>
+	
+	<color name="text_color_black">#4b4d43</color>
+	
+	<color name="PANG_dark">#32A31C</color>
+	<color name="PANG_bright">#59E01B</color>
+	<color name="PANG_light">#B9F56C</color>
+	<color name="PANG_secondary">#666666</color>
+	<color name="PANG_highlight">#DDDDDD</color>
+		
+	<!-- red -->
+	<color name="main_red">#911100</color>
+	<color name="bright_red">#BA1100</color>
+	<color name="light_red">#FFD1CF</color>
+	
+	<!-- orange -->
+	<color name="main_orange">#BF3D00</color>
+	<color name="bright_orange">#FF5200</color>
+	<color name="light_orange">#F2AF83</color>
+	
+	<!-- green -->
+	<color name="main_green">#32A31C</color>
+	<color name="bright_green">#59E01B</color>
+	<color name="light_green">#B9F56C</color>
+	
+	<!-- blue -->
+	<color name="main_blue">#0C3475</color>
+	<color name="bright_blue">#008CE1</color>
+	<color name="light_blue">#BACFE0</color>
+	
+	<!-- purple -->
+	<color name="main_purple">#59196E</color>
+	<color name="bright_purple">#8737A1</color>
+	<color name="light_purple">#DEBEFF</color>
+	
+	<!-- khj color -->
+	<color name="chart_green">#a5e61f</color>
+	<color name="chart_green2">#86c308</color>
+	<color name="chart_blue">#00c2d4</color>
+	<color name="chart_gray">#9B9B9B</color>
+	<color name="chart_light_gray">#DFE0DC</color>
+	<color name="chart_red">#f26f3d</color>
+
+	<color name="eg_cyan_light">#40ADB4</color>
+	<color name="eg_cyan_dark">#14769C</color>
+	<color name="eg_yellow_light">#FFF35B</color>
+	<color name="eg_yellow_dark">#F4C322</color>
+	<color name="eg_brown">#946525</color>
+	<color name="eg_menu_blue">#29ABE2</color>
+</resources>
