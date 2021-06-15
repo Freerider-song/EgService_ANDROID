@@ -8,14 +8,14 @@
 
     <TextView
         android:id="@+id/tv_name"
-        android:layout_width="7mm"
+        android:layout_width="10mm"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
         android:text="홍길동"
         android:textColor="@color/eg_cyan_light"
-        android:textSize="14dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tv_phone"
         app:layout_constraintHorizontal_bias="0.5"
@@ -29,13 +29,13 @@
         android:gravity="center_horizontal"
         android:text="010-0000-0000"
         android:textColor="@color/eg_cyan_light"
-        android:textSize="14dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_name"
         app:layout_constraintEnd_toStartOf="@+id/tv_time_last_login"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_name"
         app:layout_constraintTop_toTopOf="@+id/tv_name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/tv_time_last_login"
@@ -44,13 +44,13 @@
         android:gravity="center_horizontal"
         android:text="11-12 16:20:17"
         android:textColor="@color/eg_cyan_light"
-        android:textSize="14dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_phone"
         app:layout_constraintEnd_toStartOf="@+id/btn_reject"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_phone"
         app:layout_constraintTop_toTopOf="@+id/tv_phone"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/btn_reject"
@@ -68,7 +68,7 @@
         android:paddingBottom="2dp"
         android:text="철회"
         android:textColor="@android:color/white"
-        android:textSize="12dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

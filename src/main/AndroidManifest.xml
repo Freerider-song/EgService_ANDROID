@@ -14,87 +14,93 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <application
-        android:name="com.enernet.eg.CaApplication"
+        android:name=".CaApplication"
         android:allowBackup="false"
         android:icon="@drawable/icon_main"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="false">
-        <activity android:name="com.enernet.eg.activity.ActivityWeb"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ActivitySiteStateDetail"></activity>
         <activity
-            android:name="com.enernet.eg.activity.ActivityQuestion"
+            android:name=".activity.ActivityUsageDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar.Dialog" />
+        <activity
+            android:name=".activity.ActivityWeb"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityQna"
+            android:name=".activity.ActivityQuestion"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityFaq"
+            android:name=".activity.ActivityQna"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityNotice"
+            android:name=".activity.ActivityFaq"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityPoint"
+            android:name=".activity.ActivityNotice"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityQnaList"
+            android:name=".activity.ActivityPoint"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityNoticeList"
+            android:name=".activity.ActivityQnaList"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityAlarm"
+            android:name=".activity.ActivityNoticeList"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivitySetting"
+            android:name=".activity.ActivityAlarm"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivitySiteState"
+            android:name=".activity.ActivitySetting"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityUsageYearly"
+            android:name=".activity.ActivitySiteState"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityUsageMonthly"
+            android:name=".activity.ActivityUsageYearly"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityUsageDaily"
+            android:name=".activity.ActivityUsageMonthly"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityUsage"
+            android:name=".activity.ActivityUsageDaily"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ActivityUsage"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityChangePasswordInput"
+            android:name=".activity.ActivityChangePasswordInput"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityChangePasswordAuth"
+            android:name=".activity.ActivityChangePasswordAuth"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivitySubscribedSub"
+            android:name=".activity.ActivitySubscribedSub"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivitySubscribedMain"
+            android:name=".activity.ActivitySubscribedMain"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityAck"
+            android:name=".activity.ActivityAck"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivitySubscribe"
+            android:name=".activity.ActivitySubscribe"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityCandidate"
+            android:name=".activity.ActivityCandidate"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivityAuth"
+            android:name=".activity.ActivityAuth"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.enernet.eg.activity.ActivitySplash"
+            android:name=".activity.ActivitySplash"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -103,7 +109,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.enernet.eg.activity.ActivityLogin"
+            android:name=".activity.ActivityLogin"
             android:screenOrientation="portrait" />
         <!--
         <receiver
@@ -117,10 +123,10 @@
             </intent-filter>
         </receiver>
         -->
-        <receiver android:name="com.enernet.eg.ActionReceiver" />
-        <receiver android:name="com.enernet.eg.ReceiverAlarm" />
+        <receiver android:name=".ActionReceiver" />
+        <receiver android:name=".ReceiverAlarm" />
         <receiver
-            android:name="com.enernet.eg.ReceiverReboot"
+            android:name=".ReceiverReboot"
             android:enabled="true"
             android:exported="false"
             android:process=":remote">
@@ -130,7 +136,7 @@
         </receiver>
 
         <service
-            android:name="com.enernet.eg.ServicePush"
+            android:name=".ServicePush"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -138,17 +144,14 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-
         <service
-            android:name="com.enernet.eg.ServiceRestarter"
+            android:name=".ServiceRestarter"
             android:enabled="true"
             android:exported="true" />
-
         <service
-            android:name="com.enernet.eg.ServiceMonitor"
+            android:name=".ServiceMonitor"
             android:enabled="true"
             android:exported="true" />
-
     </application>
 
 </manifest>

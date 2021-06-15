@@ -366,9 +366,9 @@
                     android:layout_height="7mm"
                     android:background="@drawable/circle_cyan_dark"
                     android:onClick="onClick"
-                    android:text="변경\n하기"
+                    android:text="변경"
                     android:textColor="#FFFFFF"
-                    android:textSize="13dp"
+                    android:textSize="15dp"
                     app:layout_constraintBottom_toBottomOf="@+id/tv_1_date_password_change"
                     app:layout_constraintEnd_toStartOf="@+id/guideline4"
                     app:layout_constraintTop_toTopOf="@+id/tv_1_date_password_change" />
@@ -538,7 +538,7 @@
                     android:layout_marginEnd="10dp"
                     android:text="사용량 보고"
                     android:textColor="@color/eg_cyan_dark"
-                    android:textSize="14sp"
+                    android:textSize="14dp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/btn_alarm_usage"
                     app:layout_constraintEnd_toStartOf="@+id/btn_alarm_usage" />
 
@@ -568,7 +568,7 @@
                     android:layout_marginEnd="5dp"
                     android:text="사용량 (kWh)"
                     android:textColor="@color/eg_cyan_dark"
-                    android:textSize="14sp"
+                    android:textSize="14dp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/et_alarm_kwh"
                     app:layout_constraintEnd_toStartOf="@+id/et_alarm_kwh" />
 
@@ -593,7 +593,7 @@
                     android:layout_marginEnd="5dp"
                     android:text="사용요금 (원)"
                     android:textColor="@color/eg_cyan_dark"
-                    android:textSize="14sp"
+                    android:textSize="14dp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/et_alarm_won"
                     app:layout_constraintEnd_toStartOf="@+id/et_alarm_won" />
 
@@ -618,7 +618,7 @@
                     android:layout_marginEnd="5dp"
                     android:text="다음 누진등급 (%)"
                     android:textColor="@color/eg_cyan_dark"
-                    android:textSize="14sp"
+                    android:textSize="14dp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/et_alarm_price_level"
                     app:layout_constraintEnd_toStartOf="@+id/et_alarm_price_level" />
 
@@ -695,7 +695,7 @@
                     android:layout_marginEnd="10dp"
                     android:text="대가족/생명유지장치 요금"
                     android:textColor="@color/eg_cyan_light"
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     app:layout_constraintBottom_toBottomOf="@+id/sp_discount_family"
                     app:layout_constraintEnd_toStartOf="@+id/sp_discount_family"
                     app:layout_constraintTop_toTopOf="@+id/sp_discount_family" />

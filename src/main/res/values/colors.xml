@@ -65,4 +65,12 @@
 	<color name="eg_yellow_dark">#F4C322</color>
 	<color name="eg_brown">#946525</color>
 	<color name="eg_menu_blue">#29ABE2</color>
+
+	<color name="ks_yellow">#F0E805</color>
+	<color name="ks_gray">#333333</color>
+	<color name="ks_blue">#1087E3</color>
+	<color name="ks_light_blue">#56A8E8</color>
+	<color name="ks_white_blue">#9ECAEC</color>
+	<color name="ks_light_gray">#dcdcdc</color>
+	<color name="ks_white_yellow">#EBED87</color>
 </resources>

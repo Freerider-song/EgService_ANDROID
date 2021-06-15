@@ -39,6 +39,7 @@ public class CaInfo {
     public SimpleDateFormat m_dfyyyyMMddhhmm_ampm=new SimpleDateFormat("yyyy-MM-dd hh:mm a");
 
     public DecimalFormat m_dfKwh = new DecimalFormat("0.#"); // 12345.7
+    public DecimalFormat m_dfPercent = new DecimalFormat("0.##");
     public DecimalFormat m_dfWon = new DecimalFormat("#,##0"); // 87,654
 
     public int m_nSeqMember=0;
@@ -93,6 +94,14 @@ public class CaInfo {
     public Date m_dtPriceModified=null;
     public String m_strPriceComment="";
     public String m_strPushId="";
+
+    //main
+    public double m_wonCurr=0.0;
+    public double m_kwhCurr =0.0;
+    public String m_dtUpdate = "";
+    public double m_wonExpected =0.0;
+    public double m_wonPrevMonth = 0.0;
+    public double m_wonPrevYear = 0.0;
 
     public int m_nAuthType=CaEngine.AUTH_TYPE_UNKNOWN;
 

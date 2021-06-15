@@ -87,7 +87,7 @@
         android:layout_marginBottom="5dp"
         android:text="@string/text_version"
         android:textColor="#C8C8C8"
-        android:textSize="12sp"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -110,7 +110,7 @@
         android:layout_marginTop="40dp"
         android:text="환영합니다!"
         android:textColor="#FFFFFF"
-        android:textSize="26sp"
+        android:textSize="26dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

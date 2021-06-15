@@ -216,10 +216,17 @@ public class ActivityUsage extends BaseActivity implements IaResultHandler {
                 it.putExtra("url", "https://www.egservice.co.kr/EgService/EG_개인정보_2019_11_04.htm");
                 startActivity(it);
             }
+            break;
 
             case R.id.cl4: {
                 Intent it = new Intent(this, ActivitySiteState.class);
                 it.putExtra("to", "trans_state");
+                startActivity(it);
+            }
+            break;
+
+            case R.id.usage_area_a: {
+                Intent it = new Intent(this, ActivityUsageDetail.class);
                 startActivity(it);
             }
             break;
@@ -242,10 +249,12 @@ public class ActivityUsage extends BaseActivity implements IaResultHandler {
                     JSONObject jo = Result.object;
 
                     double dWon=jo.getDouble("won_curr");
+                    CaApplication.m_Info.m_wonCurr = dWon;
                     TextView tvWon=findViewById(R.id.tv_won);
                     tvWon.setText(CaApplication.m_Info.m_dfWon.format(dWon));
 
                     double dKwh=jo.getDouble("kwh_curr");
+                    CaApplication.m_Info.m_kwhCurr= dKwh;
                     TextView tvKwh=findViewById(R.id.tv_kwh);
                     tvKwh.setText("[사용량 : " + CaApplication.m_Info.m_dfKwh.format(dKwh) + " kWh]");
 
@@ -254,13 +263,17 @@ public class ActivityUsage extends BaseActivity implements IaResultHandler {
 
                     TextView tvUpdate=findViewById(R.id.tv_time_update);
                     tvUpdate.setText(CaApplication.m_Info.m_dfyyyyMMddhhmm_ampm.format(dtUpdate));
+                    CaApplication.m_Info.m_dtUpdate = CaApplication.m_Info.m_dfyyyyMMddhhmm_ampm.format(dtUpdate);
 
                     double dWonExpected=jo.getDouble("won_expected");
+                    CaApplication.m_Info.m_wonExpected = dWonExpected;
                     TextView tvWonExpected=findViewById(R.id.tv_won_expected);
                     tvWonExpected.setText(CaApplication.m_Info.m_dfWon.format(dWonExpected));
 
                     double dWonPrevMonth=jo.getDouble("won_prev_month");
                     double dWonPrevYear=jo.getDouble("won_prev_year");
+                    CaApplication.m_Info.m_wonPrevMonth = dWonPrevMonth;
+                    CaApplication.m_Info.m_wonPrevYear = dWonPrevYear;
 
                     setDeltaWonPrevMonth(dWon - dWonPrevMonth);
                     setDeltaWonPrevYear(dWon - dWonPrevYear);

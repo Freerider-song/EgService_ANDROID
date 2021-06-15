@@ -37,6 +37,10 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="false" >
         <activity
+            android:name="com.enernet.eg.activity.ActivityUsageDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar.Dialog" />
+        <activity
             android:name="com.enernet.eg.activity.ActivityWeb"
             android:screenOrientation="portrait" />
         <activity
@@ -159,7 +163,6 @@
             android:name="com.enernet.eg.ServiceMonitor"
             android:enabled="true"
             android:exported="true" />
-
         <!--
              FirebaseMessagingService performs security checks at runtime,
              but set to not exported to explicitly avoid allowing another app to call it.

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityUsageDetail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_usage_detail"
+        android:layout_width="60mm"
+        android:layout_height="100mm"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_round_square_light_cyan_hollow"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".activity.ActivityAlarm">
+
+        <TextView
+            android:id="@+id/tv_won_detai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:text="6,973"
+            android:textColor="@color/eg_cyan_dark"
+            android:textSize="65dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/tv_instrument"
+            app:layout_constraintTop_toBottomOf="@+id/tv_instrument" />
+
+        <TextView
+            android:id="@+id/tv_won_detail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="kWh"
+            android:textColor="@color/eg_cyan_dark"
+            android:textSize="40dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_won_detai"
+            app:layout_constraintStart_toEndOf="@+id/tv_won_detai"
+            app:layout_constraintTop_toTopOf="@+id/tv_won_detai"
+            app:layout_constraintVertical_bias="0.72" />
+
+        <TextView
+            android:id="@+id/tv_won_expected_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="15"
+            android:textColor="@color/eg_cyan_dark"
+            android:textSize="65dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/tv_won_detai"
+            app:layout_constraintTop_toBottomOf="@+id/tv_won_expected_title" />
+
+        <TextView
+            android:id="@+id/tv_won_expected_detail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="% 감소"
+            android:textColor="@color/eg_cyan_dark"
+            android:textSize="40dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_won_expected_detail"
+            app:layout_constraintStart_toEndOf="@+id/tv_won_expected_detail"
+            app:layout_constraintTop_toTopOf="@+id/tv_won_expected_detail"
+            app:layout_constraintVertical_bias="0.72" />
+
+        <TextView
+            android:id="@+id/tv_won_expected_detail4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Kg"
+            android:textColor="@color/eg_cyan_light"
+            android:textSize="40dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_kwh_detail"
+            app:layout_constraintStart_toEndOf="@+id/tv_kwh_detail"
+            app:layout_constraintTop_toTopOf="@+id/tv_kwh_detail"
+            app:layout_constraintVertical_bias="0.72" />
+
+        <TextView
+            android:id="@+id/tv_kwh_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="102.7"
+            android:textColor="@color/eg_cyan_light"
+            android:textSize="65dp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/tv_won_detai"
+            app:layout_constraintTop_toBottomOf="@+id/tv_won_expected_title2" />
+
+        <TextView
+            android:id="@+id/tv_won_percent_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="5dp"
+            android:text="12%"
+            android:textColor="@color/bright_blue"
+            android:textSize="35dp"
+            android:textStyle="normal|bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_instrument6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_won_percent_month" />
+
+        <TextView
+            android:id="@+id/tv_instrument6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:text="작년보다"
+            android:textColor="@color/ks_gray"
+            android:textSize="25dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_won_percent_year"
+            app:layout_constraintEnd_toStartOf="@+id/tv_won_percent_year"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_won_percent_year"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/tv_won_year_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="감소"
+            android:textColor="@color/ks_gray"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_won_percent_year"
+            app:layout_constraintStart_toEndOf="@+id/tv_won_percent_year"
+            app:layout_constraintTop_toTopOf="@+id/tv_won_percent_year"
+            app:layout_constraintVertical_bias="0.615" />
+
+        <TextView
+            android:id="@+id/tv_instrument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="아파트 전체 사용량"
+            android:textColor="@color/ks_gray"
+            android:textSize="22dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.105"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_won_expected_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="전년 동월 대비 사용량"
+            android:textColor="@color/ks_gray"
+            android:textSize="22dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_won_detai" />
+
+        <TextView
+            android:id="@+id/tv_won_expected_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="전년 대비 온실 가스 배출량"
+            android:textColor="@color/ks_gray"
+            android:textSize="22dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_won_expected_detail" />
+
+        <TextView
+            android:id="@+id/tv_won_month_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="증가"
+            android:textColor="@color/ks_gray"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_won_percent_month"
+            app:layout_constraintStart_toEndOf="@+id/tv_won_percent_month"
+            app:layout_constraintTop_toTopOf="@+id/tv_won_percent_month"
+            app:layout_constraintVertical_bias="0.538" />
+
+        <TextView
+            android:id="@+id/tv_won_percent_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="23%"
+            android:textColor="@color/bright_red"
+            android:textSize="35dp"
+            android:textStyle="normal|bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_instrument3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_kwh_detail" />
+
+        <TextView
+            android:id="@+id/tv_instrument3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:text="지난달보다"
+            android:textColor="@color/ks_gray"
+            android:textSize="25dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_won_percent_month"
+            app:layout_constraintEnd_toStartOf="@+id/tv_won_percent_month"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_won_percent_month"
+            app:layout_constraintVertical_bias="0.538" />
+
+        <TextView
+            android:id="@+id/tv_time_update3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:onClick="onClick"
+            android:textColor="@color/ks_gray"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_refresh3"
+            tools:text="2019-11-16 16:45 오후" />
+
+        <ImageButton
+            android:id="@+id/btn_refresh3"
+            android:layout_width="4mm"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="15dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/transparent"
+            android:contentDescription="TODO"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/refresh_brown" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
