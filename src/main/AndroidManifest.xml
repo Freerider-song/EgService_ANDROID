@@ -24,7 +24,10 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="false">
-        <activity android:name=".activity.ActivitySiteStateDetail"></activity>
+        <activity
+            android:name=".activity.ActivitySiteStateDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar.Dialog" />
         <activity
             android:name=".activity.ActivityUsageDetail"
             android:screenOrientation="portrait"

@@ -27,6 +27,7 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fade_in
 anim move_left_in_activity
 anim move_left_out_activity
 anim move_right_in_activity
@@ -2425,7 +2426,7 @@ id btn_logout
 id btn_menu
 id btn_no
 id btn_refresh
-id btn_refresh2
+id btn_refresh3
 id btn_reject
 id btn_request_ack
 id btn_save
@@ -2465,7 +2466,7 @@ id cl1
 id cl2
 id cl3
 id cl4
-id cl_usage_detail
+id cl_site_state_detail
 id clause_outline
 id clear_text
 id clip_horizontal
@@ -2940,6 +2941,8 @@ id tv_discount_family
 id tv_discount_social
 id tv_dong_ho_name
 id tv_empty
+id tv_gas_delta
+id tv_gas_percent
 id tv_how_to_get
 id tv_how_to_use
 id tv_info
@@ -2948,7 +2951,7 @@ id tv_instrument3
 id tv_instrument6
 id tv_kwh
 id tv_kwh_daily_avg
-id tv_kwh_detail
+id tv_kwh_delta
 id tv_kwh_percent
 id tv_member_name
 id tv_message
@@ -2965,22 +2968,19 @@ id tv_question
 id tv_read_day
 id tv_read_period
 id tv_site_name
+id tv_site_state_kwh
 id tv_time_answer
 id tv_time_created
 id tv_time_last_login
 id tv_time_qna
 id tv_time_question
 id tv_time_update
-id tv_time_update2
+id tv_time_update3
 id tv_title
 id tv_trans_state
 id tv_won
-id tv_won_detail
 id tv_won_detail2
 id tv_won_expected
-id tv_won_expected_detail
-id tv_won_expected_detail3
-id tv_won_expected_detail4
 id tv_won_expected_title
 id tv_won_expected_title2
 id tv_won_month_title
@@ -3087,6 +3087,7 @@ layout activity_qna_list
 layout activity_question
 layout activity_setting
 layout activity_site_state
+layout activity_site_state_detail
 layout activity_splash
 layout activity_subscribe
 layout activity_subscribed_main

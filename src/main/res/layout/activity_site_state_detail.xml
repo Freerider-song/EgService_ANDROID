@@ -7,9 +7,9 @@
     tools:context=".activity.ActivityUsageDetail">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_usage_detail"
+        android:id="@+id/cl_site_state_detail"
         android:layout_width="60mm"
-        android:layout_height="100mm"
+        android:layout_height="80mm"
         android:layout_gravity="center"
         android:background="@drawable/shape_round_square_light_cyan_hollow"
         android:onClick="onClick"
@@ -20,7 +20,7 @@
         tools:context=".activity.ActivityAlarm">
 
         <TextView
-            android:id="@+id/tv_won_detai"
+            android:id="@+id/tv_site_state_kwh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -41,13 +41,13 @@
             android:textColor="@color/eg_cyan_dark"
             android:textSize="40dp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_won_detai"
-            app:layout_constraintStart_toEndOf="@+id/tv_won_detai"
-            app:layout_constraintTop_toTopOf="@+id/tv_won_detai"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_site_state_kwh"
+            app:layout_constraintStart_toEndOf="@+id/tv_site_state_kwh"
+            app:layout_constraintTop_toTopOf="@+id/tv_site_state_kwh"
             app:layout_constraintVertical_bias="0.72" />
 
         <TextView
-            android:id="@+id/tv_won_expected_detail"
+            android:id="@+id/tv_kwh_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -55,11 +55,11 @@
             android:textColor="@color/eg_cyan_dark"
             android:textSize="65dp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="@+id/tv_won_detai"
+            app:layout_constraintStart_toStartOf="@+id/tv_site_state_kwh"
             app:layout_constraintTop_toBottomOf="@+id/tv_won_expected_title" />
 
         <TextView
-            android:id="@+id/tv_won_expected_detail3"
+            android:id="@+id/tv_kwh_delta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -67,27 +67,27 @@
             android:textColor="@color/eg_cyan_dark"
             android:textSize="40dp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_won_expected_detail"
-            app:layout_constraintStart_toEndOf="@+id/tv_won_expected_detail"
-            app:layout_constraintTop_toTopOf="@+id/tv_won_expected_detail"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_kwh_percent"
+            app:layout_constraintStart_toEndOf="@+id/tv_kwh_percent"
+            app:layout_constraintTop_toTopOf="@+id/tv_kwh_percent"
             app:layout_constraintVertical_bias="0.72" />
 
         <TextView
-            android:id="@+id/tv_won_expected_detail4"
+            android:id="@+id/tv_gas_delta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="Kg"
+            android:text="kg 감소"
             android:textColor="@color/eg_cyan_light"
             android:textSize="40dp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_kwh_detail"
-            app:layout_constraintStart_toEndOf="@+id/tv_kwh_detail"
-            app:layout_constraintTop_toTopOf="@+id/tv_kwh_detail"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_gas_percent"
+            app:layout_constraintStart_toEndOf="@+id/tv_gas_percent"
+            app:layout_constraintTop_toTopOf="@+id/tv_gas_percent"
             app:layout_constraintVertical_bias="0.72" />
 
         <TextView
-            android:id="@+id/tv_kwh_detail"
+            android:id="@+id/tv_gas_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -95,51 +95,8 @@
             android:textColor="@color/eg_cyan_light"
             android:textSize="65dp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="@+id/tv_won_detai"
+            app:layout_constraintStart_toStartOf="@+id/tv_site_state_kwh"
             app:layout_constraintTop_toBottomOf="@+id/tv_won_expected_title2" />
-
-        <TextView
-            android:id="@+id/tv_won_percent_year"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="5dp"
-            android:text="12%"
-            android:textColor="@color/bright_blue"
-            android:textSize="35dp"
-            android:textStyle="normal|bold"
-            app:layout_constraintStart_toEndOf="@+id/tv_instrument6"
-            app:layout_constraintTop_toBottomOf="@+id/tv_won_percent_month" />
-
-        <TextView
-            android:id="@+id/tv_instrument6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="15dp"
-            android:text="작년보다"
-            android:textColor="@color/ks_gray"
-            android:textSize="25dp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_won_percent_year"
-            app:layout_constraintEnd_toStartOf="@+id/tv_won_percent_year"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_won_percent_year"
-            app:layout_constraintVertical_bias="0.615" />
-
-        <TextView
-            android:id="@+id/tv_won_year_title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="감소"
-            android:textColor="@color/ks_gray"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_won_percent_year"
-            app:layout_constraintStart_toEndOf="@+id/tv_won_percent_year"
-            app:layout_constraintTop_toTopOf="@+id/tv_won_percent_year"
-            app:layout_constraintVertical_bias="0.615" />
 
         <TextView
             android:id="@+id/tv_instrument"
@@ -167,7 +124,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_won_detai" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_site_state_kwh" />
 
         <TextView
             android:id="@+id/tv_won_expected_title2"
@@ -181,50 +138,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_won_expected_detail" />
-
-        <TextView
-            android:id="@+id/tv_won_month_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="증가"
-            android:textColor="@color/ks_gray"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_won_percent_month"
-            app:layout_constraintStart_toEndOf="@+id/tv_won_percent_month"
-            app:layout_constraintTop_toTopOf="@+id/tv_won_percent_month"
-            app:layout_constraintVertical_bias="0.538" />
-
-        <TextView
-            android:id="@+id/tv_won_percent_month"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:text="23%"
-            android:textColor="@color/bright_red"
-            android:textSize="35dp"
-            android:textStyle="normal|bold"
-            app:layout_constraintStart_toEndOf="@+id/tv_instrument3"
-            app:layout_constraintTop_toBottomOf="@+id/tv_kwh_detail" />
-
-        <TextView
-            android:id="@+id/tv_instrument3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="15dp"
-            android:text="지난달보다"
-            android:textColor="@color/ks_gray"
-            android:textSize="25dp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_won_percent_month"
-            app:layout_constraintEnd_toStartOf="@+id/tv_won_percent_month"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tv_won_percent_month"
-            app:layout_constraintVertical_bias="0.538" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_kwh_percent" />
 
         <TextView
             android:id="@+id/tv_time_update3"

@@ -36,7 +36,7 @@
     <Spinner
         android:id="@+id/sp_site"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="60dp"
@@ -49,7 +49,7 @@
     <Spinner
         android:id="@+id/sp_dong"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="60dp"
@@ -62,7 +62,7 @@
     <Spinner
         android:id="@+id/sp_ho"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="60dp"
@@ -75,7 +75,7 @@
     <EditText
         android:id="@+id/et_name"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="60dp"
@@ -84,6 +84,7 @@
         android:hint="이름"
         android:inputType="textPersonName"
         android:paddingLeft="25dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +107,7 @@
     <EditText
         android:id="@+id/et_phone"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="60dp"
@@ -114,7 +115,8 @@
         android:ems="10"
         android:hint="휴대폰"
         android:inputType="textPersonName"
-        android:paddingLeft="25dp"
+        android:paddingLeft="20dp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +134,7 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="각 세대별 최초 가입은 세대 대표자만 가능합니다."

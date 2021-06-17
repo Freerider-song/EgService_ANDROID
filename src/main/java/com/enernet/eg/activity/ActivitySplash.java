@@ -2,6 +2,9 @@ package com.enernet.eg.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import com.enernet.eg.R;
 
@@ -18,6 +21,11 @@ public class ActivitySplash extends BaseActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
+		TextView egService =findViewById(R.id.textView7);
+		TextView intro = findViewById(R.id.textView11);
+		Animation fadeIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
+		egService.startAnimation(fadeIn);
+		intro.startAnimation(fadeIn);
 		nextIntent = new Intent(this, ActivityLogin.class);
 		splashThread = new Thread() {
 			@Override
@@ -27,7 +35,7 @@ public class ActivitySplash extends BaseActivity {
 					int waited = 0;
 					while(waited < splashTime) {
 						sleep(1000);
-						waited += 1000;
+						waited += 1500;
 					}
 				} catch (InterruptedException e) {
 				} finally {

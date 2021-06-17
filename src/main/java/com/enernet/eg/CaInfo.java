@@ -103,6 +103,12 @@ public class CaInfo {
     public double m_wonPrevMonth = 0.0;
     public double m_wonPrevYear = 0.0;
 
+    //site state
+
+    public String m_strSiteUpdate = "";
+    public double m_dSiteKwhFromMonth = 0.0;
+    public double m_dSiteKwhFromMonthPrevYear = 0.0;
+
     public int m_nAuthType=CaEngine.AUTH_TYPE_UNKNOWN;
 
     public boolean m_bSubscribingAsMainMember=false;

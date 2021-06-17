@@ -3,6 +3,8 @@ package com.enernet.eg.activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.RelativeSizeSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -419,6 +421,15 @@ public class ActivityUsageDaily extends BaseActivity implements IaResultHandler 
             TextView tvKwh=findViewById(R.id.tv_kwh);
             tvKwh.setText(CaApplication.m_Info.m_dfKwh.format(dSumKwhCurr) + " kWh");
 
+            //문자열 일부 수정
+            String content = tvKwh.getText().toString();
+            SpannableString spannableString = new SpannableString(content);
+            String word = "kWh";
+            int start = content.indexOf(word);
+            int end = start + word.length();
+            spannableString.setSpan(new RelativeSizeSpan(0.5f), start, end, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
+            tvKwh.setText(spannableString);
+
             double dKwhDeltaPercent=100.0*(dSumKwhCurr - dSumKwhPrev)/dSumKwhPrev;
             if (dSumKwhPrev==0.0) dKwhDeltaPercent=0.0;
 
@@ -443,6 +454,14 @@ public class ActivityUsageDaily extends BaseActivity implements IaResultHandler 
             // won
             TextView tvWon=findViewById(R.id.tv_won);
             tvWon.setText(CaApplication.m_Info.m_dfWon.format(dSumWonCurr) + " 원");
+            //문자열 일부 수정
+            String content2 = tvWon.getText().toString();
+            SpannableString spannableString2 = new SpannableString(content2);
+            String word2 = "원";
+            int start2 = content2.indexOf(word2);
+            int end2 = start2 + word2.length();
+            spannableString2.setSpan(new RelativeSizeSpan(0.5f), start2, end2, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
+            tvWon.setText(spannableString2);
 
             double dWonDeltaPercent=100.0*(dSumWonCurr - dSumWonPrev)/dSumWonPrev;
             if (dSumKwhPrev==0.0) dWonDeltaPercent=0.0;

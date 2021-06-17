@@ -16,6 +16,7 @@ import com.enernet.eg.CaResult;
 import com.enernet.eg.IaResultHandler;
 import com.enernet.eg.R;
 import com.enernet.eg.StringUtil;
+import com.mikepenz.iconics.context.IconicsAttrsApplier;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -67,6 +68,12 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
             case R.id.btn_refresh: {
                 Log.i("SiteState", "Refresh button clicked...");
                 CaApplication.m_Engine.GetUsageCurrentOfOneSite(CaApplication.m_Info.m_nSeqSite,this,this);
+            }
+            break;
+
+            case R.id.usage_area_a: {
+                Intent it = new Intent(this, ActivitySiteStateDetail.class);
+                startActivity(it);
             }
             break;
         }
@@ -121,14 +128,17 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
                     JSONObject jo = Result.object;
 
                     String strTimeUpdate = jo.getString("time_curr");
+                    CaApplication.m_Info.m_strSiteUpdate = strTimeUpdate;
 
                     double dKwhFromYear = jo.getDouble("site_kwh_from_year");
                     double dKwhFromMonth = jo.getDouble("site_kwh_from_month");
+                    CaApplication.m_Info.m_dSiteKwhFromMonth = dKwhFromMonth;
                     double dKwhFromWeek = jo.getDouble("site_kwh_from_week");
                     double dKwhFromDay = jo.getDouble("site_kwh_from_day");
 
                     double dKwhFromYearPrevYear = jo.getDouble("site_kwh_from_year_prev_year");
                     double dKwhFromMonthPrevYear = jo.getDouble("site_kwh_from_month_prev_year");
+                    CaApplication.m_Info.m_dSiteKwhFromMonthPrevYear = dKwhFromMonthPrevYear;
                     double dKwhFromWeekPrevYear = jo.getDouble("site_kwh_from_week_prev_year");
                     double dKwhFromDayPrevYear = jo.getDouble("site_kwh_from_day_prev_year");
 
@@ -166,7 +176,8 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
             TextView tvKwh=findViewById(R.id.tv_kwh);
             tvKwh.setText(CaApplication.m_Info.m_dfKwh.format(dKwhMonthCurrYear));
 
-            double dDeltaKwh=(dKwhMonthCurrYear - dKwhMonthPrevYear)/dKwhMonthPrevYear;
+            //double dDeltaKwh=(dKwhMonthCurrYear - dKwhMonthPrevYear)/dKwhMonthPrevYear;
+            double dDeltaKwh=(dKwhMonthCurrYear - dKwhMonthPrevYear);
             if (dKwhMonthPrevYear==0.0) dDeltaKwh=0.0;
 
             double dDeltaGas=dDeltaKwh * CaInfo.KWH_TO_GAS;

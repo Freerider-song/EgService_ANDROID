@@ -36,6 +36,10 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="false" >
         <activity
+            android:name="com.enernet.eg.activity.ActivitySiteStateDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar.Dialog" />
+        <activity
             android:name="com.enernet.eg.activity.ActivityUsageDetail"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar.Dialog" />

@@ -129,6 +129,7 @@
                 android:id="@+id/usage_area_a"
                 android:layout_width="46mm"
                 android:layout_height="50mm"
+                android:onClick="onClick"
                 app:layout_constraintBottom_toBottomOf="@+id/back_site_state"
                 app:layout_constraintStart_toStartOf="@+id/back_site_state"
                 app:layout_constraintTop_toTopOf="@+id/back_site_state"

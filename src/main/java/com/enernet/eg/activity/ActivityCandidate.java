@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.enernet.eg.CaApplication;
 import com.enernet.eg.CaEngine;
@@ -173,7 +176,7 @@ public class ActivityCandidate extends BaseActivity implements IaResultHandler {
                             CaApplication.m_Info.m_strSiteName=m_strSiteName;
                             m_nSeqSite = items.get(position).m_nSeq;
                             Log.i("ActivityCandidate", "SiteSpinner selected="+m_strSiteName + " (" + m_nSeqSite + "), position=" + position);
-
+                            ((TextView)parent.getChildAt(0)).setTextColor(Color.WHITE);
                             CaApplication.m_Info.m_nSeqAptHoSubscribing = 0; // to prevent mismatch on submission
 
                             CaApplication.m_Engine.GetAptDongList(m_nSeqSite, ActivityCandidate.this, ActivityCandidate.this);
@@ -230,7 +233,7 @@ public class ActivityCandidate extends BaseActivity implements IaResultHandler {
                             CaApplication.m_Info.m_strAptDongName=m_strDongName;
                             m_nSeqDong = items.get(position).m_nSeq;
                             Log.i("ActivityCandidate", "DongSpinner selected="+m_strDongName + " (" + m_nSeqDong + "), position=" + position);
-
+                            ((TextView)parent.getChildAt(0)).setTextColor(Color.WHITE);
                             CaApplication.m_Info.m_nSeqAptHoSubscribing = 0; // to prevent mismatch on submission
 
                             CaApplication.m_Engine.GetAptHoList(m_nSeqSite, m_nSeqDong, ActivityCandidate.this, ActivityCandidate.this);
@@ -284,6 +287,7 @@ public class ActivityCandidate extends BaseActivity implements IaResultHandler {
                             m_strHoName = items.get(position).m_strName;
                             CaApplication.m_Info.m_strAptHoName=m_strHoName;
                             CaApplication.m_Info.m_nSeqAptHoSubscribing = items.get(position).m_nSeq;
+                            ((TextView)parent.getChildAt(0)).setTextColor(Color.WHITE);
                             Log.i("ActivityCandidate", "HoSpinner selected="+m_strHoName
                                     + " (" + CaApplication.m_Info.m_nSeqAptHoSubscribing + "), position=" + position);
 

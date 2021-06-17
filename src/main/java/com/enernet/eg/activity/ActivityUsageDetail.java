@@ -33,17 +33,17 @@ public class ActivityUsageDetail extends BaseActivity implements IaResultHandler
 
     public void viewSetting() {
 
-        TextView tvWon=findViewById(R.id.tv_won_detai);
+        TextView tvWon=findViewById(R.id.tv_site_state_kwh);
         tvWon.setText(CaApplication.m_Info.m_dfWon.format(CaApplication.m_Info.m_wonCurr));
 
-        TextView tvKwh=findViewById(R.id.tv_kwh_detail);
+        TextView tvKwh=findViewById(R.id.tv_gas_percent);
         tvKwh.setText(CaApplication.m_Info.m_dfKwh.format(CaApplication.m_Info.m_kwhCurr));
 
 
         TextView tvUpdate=findViewById(R.id.tv_time_update3);
         tvUpdate.setText(CaApplication.m_Info.m_dtUpdate);
 
-        TextView tvWonExpected=findViewById(R.id.tv_won_expected_detail);
+        TextView tvWonExpected=findViewById(R.id.tv_kwh_percent);
         tvWonExpected.setText(CaApplication.m_Info.m_dfWon.format(CaApplication.m_Info.m_wonExpected));
 
         TextView tvWonMonth = findViewById(R.id.tv_won_percent_month);
@@ -55,24 +55,36 @@ public class ActivityUsageDetail extends BaseActivity implements IaResultHandler
         if(CaApplication.m_Info.m_wonCurr - CaApplication.m_Info.m_wonPrevMonth>0){
             tvWonMonth.setTextColor(getResources().getColor(R.color.bright_red));
             tvWonMonthTitle.setText("증가");
-            tvWonMonth.setTextColor(getResources().getColor(R.color.bright_red));
+            tvWonMonthTitle.setTextColor(getResources().getColor(R.color.bright_red));
         }
         else{
             tvWonMonth.setTextColor(getResources().getColor(R.color.bright_blue));
             tvWonMonthTitle.setText("감소");
-            tvWonMonth.setTextColor(getResources().getColor(R.color.bright_blue));
+            tvWonMonthTitle.setTextColor(getResources().getColor(R.color.bright_blue));
         }
 
         tvWonYear.setText(Integer.toString((int)(100 * Double.parseDouble(CaApplication.m_Info.m_dfPercent.format(Math.abs(CaApplication.m_Info.m_wonCurr - CaApplication.m_Info.m_wonPrevYear)/CaApplication.m_Info.m_wonCurr))))+"%");
         if(CaApplication.m_Info.m_wonCurr - CaApplication.m_Info.m_wonPrevYear>0){
             tvWonYear.setTextColor(getResources().getColor(R.color.bright_red));
             tvWonYearTitle.setText("증가");
-            tvWonYear.setTextColor(getResources().getColor(R.color.bright_red));
+            tvWonYearTitle.setTextColor(getResources().getColor(R.color.bright_red));
         }
         else{
             tvWonYear.setTextColor(getResources().getColor(R.color.bright_blue));
             tvWonYearTitle.setText("감소");
-            tvWonYear.setTextColor(getResources().getColor(R.color.bright_blue));
+            tvWonYearTitle.setTextColor(getResources().getColor(R.color.bright_blue));
+        }
+        if(CaApplication.m_Info.m_wonPrevMonth == 0.0){
+            tvWonMonth.setText("0");
+            tvWonMonth.setTextColor(getResources().getColor(R.color.eg_cyan_light));
+            tvWonMonthTitle.setText("");
+            tvWonMonthTitle.setTextColor(getResources().getColor(R.color.eg_cyan_light));
+        }
+        if(CaApplication.m_Info.m_wonPrevYear == 0.0){
+            tvWonYear.setText("0");
+            tvWonYear.setTextColor(getResources().getColor(R.color.eg_cyan_light));
+            tvWonYearTitle.setText("");
+            tvWonYearTitle.setTextColor(getResources().getColor(R.color.eg_cyan_light));
         }
     }
 
@@ -102,7 +114,7 @@ public class ActivityUsageDetail extends BaseActivity implements IaResultHandler
             }
             break;
 
-            case R.id.cl_usage_detail: {
+            case R.id.cl_site_state_detail: {
                 finish();
             }
 
@@ -126,7 +138,7 @@ public class ActivityUsageDetail extends BaseActivity implements IaResultHandler
                     JSONObject jo = Result.object;
 
                     double dWon=jo.getDouble("won_curr");
-                    TextView tvWon=findViewById(R.id.tv_won_detai);
+                    TextView tvWon=findViewById(R.id.tv_site_state_kwh);
                     tvWon.setText(CaApplication.m_Info.m_dfWon.format(dWon));
 
                     /*
@@ -143,7 +155,7 @@ public class ActivityUsageDetail extends BaseActivity implements IaResultHandler
                     tvUpdate.setText(CaApplication.m_Info.m_dfyyyyMMddhhmm_ampm.format(dtUpdate));
 
                     double dWonExpected=jo.getDouble("won_expected");
-                    TextView tvWonExpected=findViewById(R.id.tv_won_expected_detail);
+                    TextView tvWonExpected=findViewById(R.id.tv_kwh_percent);
                     tvWonExpected.setText(CaApplication.m_Info.m_dfWon.format(dWonExpected));
 
                     double dWonPrevMonth=jo.getDouble("won_prev_month");
@@ -178,6 +190,18 @@ public class ActivityUsageDetail extends BaseActivity implements IaResultHandler
                         tvWonYear.setTextColor(getResources().getColor(R.color.bright_blue));
                     }
                     //int actRatio = (int) (100 * Double.parseDouble(CaApplication.m_Info.m_dfPercent.format((double)CaApplication.m_Info.m_nActCountWithHistory / (double)CaApplication.m_Info.m_nActCount)))
+                    if(dWonPrevMonth == 0.0){
+                        tvWonMonth.setText("0");
+                        tvWonMonth.setTextColor(getResources().getColor(R.color.eg_cyan_light));
+                        tvWonMonthTitle.setText("");
+                        tvWonMonthTitle.setTextColor(getResources().getColor(R.color.eg_cyan_light));
+                    }
+                    if(dWonPrevYear == 0.0){
+                        tvWonYear.setText("0");
+                        tvWonYear.setTextColor(getResources().getColor(R.color.eg_cyan_light));
+                        tvWonYearTitle.setText("");
+                        tvWonYearTitle.setTextColor(getResources().getColor(R.color.eg_cyan_light));
+                    }
 
 
                 }
