@@ -73,4 +73,6 @@
 	<color name="ks_white_blue">#9ECAEC</color>
 	<color name="ks_light_gray">#dcdcdc</color>
 	<color name="ks_white_yellow">#EBED87</color>
+
+	<color name="colorPrimaryDark">#2C7B9D</color>
 </resources>

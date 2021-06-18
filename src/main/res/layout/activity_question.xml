@@ -83,7 +83,7 @@
             android:layout_marginTop="80dp"
             android:text="문의하기"
             android:textColor="#FFFFFF"
-            android:textSize="26sp"
+            android:textSize="26dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
