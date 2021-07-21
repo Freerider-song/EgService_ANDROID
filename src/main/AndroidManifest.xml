@@ -24,6 +24,7 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="false">
+        <activity android:name=".activity.ActivityPopUpLocked"></activity>
         <activity
             android:name=".activity.ActivitySiteStateDetail"
             android:screenOrientation="portrait"
@@ -155,6 +156,10 @@
             android:name=".ServiceMonitor"
             android:enabled="true"
             android:exported="true" />
+
+        <meta-data
+            android:name="com.enernet.eg"
+            android:value="AIzaSyDsq-ElrtvJ10Tume61LHHmRGM9yaEWGFU" />
     </application>
 
 </manifest>

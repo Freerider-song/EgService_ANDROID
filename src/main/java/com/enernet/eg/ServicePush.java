@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.enernet.eg.activity.ActivityAlarm;
 import com.enernet.eg.activity.ActivityLogin;
+import com.enernet.eg.activity.ActivityPopUpLocked;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -21,6 +23,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Map;
+
+import static android.content.ContentValues.TAG;
 
 public class ServicePush extends FirebaseMessagingService implements IaResultHandler {
 
@@ -123,6 +127,70 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
             }
             break;
         }
+
+    }
+
+    private void notifyImage(String strTitle, String strBody) {
+        Log.d("ServicePush", "notifyAlarmKwh called...");
+
+        final int nNotiId=3186;
+
+        Context ctx=getApplicationContext();
+
+        //Intent it=new Intent(ctx, ActivityLogin.class);
+        Intent it=new Intent(ctx, ActivityPopUpLocked.class)
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        it.setAction(Intent.ACTION_MAIN);
+        it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+        // ActivityPopUplocked 실행
+        ctx.startActivity(it);
+
+        PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+
+        NotificationManager notificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        String strChannelId="1234";
+
+        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
+
+            NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+            if (mChannel == null) {
+                //IMPORTANCE_HIGH 여야 헤드업 알림 가능
+                mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                notificationManager.createNotificationChannel(mChannel);
+            }
+
+            NotificationCompat.Builder notificationBuilder =
+                    new NotificationCompat.Builder(this, strChannelId)
+                            .setSmallIcon(R.drawable.push_icon)
+                            .setContentTitle(strTitle)
+                            .setContentText(strBody)
+                            .setContentIntent(pit)
+                            .setAutoCancel(true)
+                            .setOngoing(false)
+                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                            .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap))
+                    ;
+
+            notificationManager.notify(nNotiId, notificationBuilder.build());
+        }
+        else {
+            NotificationCompat.Builder notificationBuilder =
+                    new NotificationCompat.Builder(this, strChannelId)
+                            .setSmallIcon(R.drawable.push_icon)
+                            .setContentTitle(strTitle)
+                            .setContentText(strBody)
+                            .setContentIntent(pit)
+                            .setAutoCancel(true)
+                            .setOngoing(false)
+                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                            .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap))
+                    ;
+
+            notificationManager.notify(nNotiId, notificationBuilder.build());
+        }
+
 
     }
 
