@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-si\\values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\2729107665cbf39eca7b15a8664a9329\\jetified-play-services-basement-17.0.0\\res\\values-si\\values.xml",
+                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\4a400d11c0a160fcbf44ab8bd6c18d16\\jetified-play-services-basement-17.5.0\\res\\values-si\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\f707edbbae6e295390b24db09a292554\\core-1.1.0\\res\\values-si\\values-si.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "5685",
-                        "endColumns": "100",
-                        "endOffsets": "5781"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\5daf4cf9fc8aecc208e12f3f7f34d2d5\\jetified-play-services-base-17.0.0\\res\\values-si\\values.xml",
+                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\9a6075462e890917f0e9510f0e2c381c\\jetified-play-services-base-17.5.0\\res\\values-si\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "2821,2931,3117,3243,3358,3559,3685,3831,4156,4366,4483,4670,4803,5006,5197,5300,5391",
                         "endColumns": "109,185,125,114,200,125,145,126,209,116,186,132,202,190,102,90,108",
                         "endOffsets": "2926,3112,3238,3353,3554,3680,3826,3953,4361,4478,4665,4798,5001,5192,5295,5386,5495"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\5641dfe254cec1c5fabae89670084a6e\\core-1.2.0\\res\\values-si\\values-si.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "49",
+                        "startColumns": "4",
+                        "startOffsets": "5685",
+                        "endColumns": "100",
+                        "endOffsets": "5781"
                     }
                 },
                 {

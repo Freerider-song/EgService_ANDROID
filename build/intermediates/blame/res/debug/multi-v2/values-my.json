@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my\\values-my.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\f707edbbae6e295390b24db09a292554\\core-1.1.0\\res\\values-my\\values-my.xml",
+                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\5641dfe254cec1c5fabae89670084a6e\\core-1.2.0\\res\\values-my\\values-my.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\5daf4cf9fc8aecc208e12f3f7f34d2d5\\jetified-play-services-base-17.0.0\\res\\values-my\\values.xml",
+                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\9a6075462e890917f0e9510f0e2c381c\\jetified-play-services-base-17.5.0\\res\\values-my\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\2729107665cbf39eca7b15a8664a9329\\jetified-play-services-basement-17.0.0\\res\\values-my\\values.xml",
+                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\4a400d11c0a160fcbf44ab8bd6c18d16\\jetified-play-services-basement-17.5.0\\res\\values-my\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

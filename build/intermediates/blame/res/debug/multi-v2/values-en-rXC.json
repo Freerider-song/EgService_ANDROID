@@ -14,20 +14,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\f707edbbae6e295390b24db09a292554\\core-1.1.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\enernet9\\.gradle\\caches\\transforms-2\\files-2.1\\5641dfe254cec1c5fabae89670084a6e\\core-1.2.0\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "202",
-                        "endOffsets": "253"
+                        "endColumns": "203",
+                        "endOffsets": "254"
                     },
                     "to": {
                         "startLines": "30",
                         "startColumns": "4",
                         "startOffsets": "5682",
-                        "endColumns": "202",
-                        "endOffsets": "5880"
+                        "endColumns": "203",
+                        "endOffsets": "5881"
                     }
                 }
             ]

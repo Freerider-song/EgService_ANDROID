@@ -1,5 +1,6 @@
 package com.enernet.eg;
 
+import java.util.Date;
 import java.util.HashMap;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,6 +49,8 @@ public class CaEngine {
 	public static final int CB_SET_QNA_LIST_AS_READ = 1039;
 	public static final int CB_CREATE_QUESTION = 1040;
 	public static final int CB_GET_MINUTE_SINCE_LAST_LP = 1041;
+	public static final int CB_GET_SITE_USAGE_FRONT = 1042;
+	public static final int CB_GET_SITE_DAILY_USAGE = 1043;
 
 	public static final String[] NO_CMD_ARGS = new String[]{};
 
@@ -441,6 +444,25 @@ public class CaEngine {
 		CaArg Arg = new CaArg("GetMinuteSinceLastLp", NO_CMD_ARGS, null);
 
 		executeCommand(Arg, CB_GET_MINUTE_SINCE_LAST_LP, false, false, Ctx, ResultHandler);
+	}
+
+	public void GetSiteUsageFront(final int nSeqSite, final int Year, final int Month, final int Day, Context Ctx, IaResultHandler ResultHandler) {
+		CaArg Arg = new CaArg("GetSiteUsageFront", NO_CMD_ARGS, null);
+		Arg.addArg("SeqSite", nSeqSite);
+		Arg.addArg("Year", Year);
+		Arg.addArg("Month", Month);
+		Arg.addArg("Day", Day);
+
+		executeCommand(Arg, CB_GET_SITE_USAGE_FRONT, false, true, Ctx, ResultHandler);
+	}
+
+	public void GetSiteDailyUsage(final int nSeqSite, final String DateFrom, final String DateTo, Context Ctx, IaResultHandler ResultHandler) {
+		CaArg Arg = new CaArg("GetSiteDailyUsage", NO_CMD_ARGS, null);
+		Arg.addArg("SeqSite", nSeqSite);
+		Arg.addArg("DateFrom", DateFrom);
+		Arg.addArg("DateTo", DateTo);
+
+		executeCommand(Arg, CB_GET_SITE_DAILY_USAGE, false, true, Ctx, ResultHandler);
 	}
 
 	public static HashMap<String, String> parseBasicResult(final CaResult Result) {

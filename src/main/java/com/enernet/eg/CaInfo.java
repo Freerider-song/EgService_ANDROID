@@ -57,6 +57,8 @@ public class CaInfo {
     public Date m_dtAuthRequested=null;
     public Date m_dtAuthResponsed=null;
 
+    public boolean m_bHoliday = true;
+
     public boolean m_bNotiAll=true;
     public boolean m_bNotiKwh=true;
     public boolean m_bNotiWon=true;

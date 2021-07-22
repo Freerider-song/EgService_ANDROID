@@ -130,7 +130,7 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
 
     }
 
-    private void notifyImage(String strTitle, String strBody) {
+    private void notifyImage(String strTitle, String strBody, Bitmap myBitmap) {
         Log.d("ServicePush", "notifyAlarmKwh called...");
 
         final int nNotiId=3186;

@@ -220,7 +220,7 @@ public class ActivityUsage extends BaseActivity implements IaResultHandler {
 
             case R.id.cl4: {
                 Intent it = new Intent(this, ActivitySiteState.class);
-                it.putExtra("to", "trans_state");
+                //it.putExtra("to", "trans_state");
                 startActivity(it);
             }
             break;

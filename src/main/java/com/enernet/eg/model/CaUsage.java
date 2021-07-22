@@ -19,6 +19,14 @@ public class CaUsage {
 	public int m_nHour=0;
 
 	public int m_nUnit=0;
+	public String m_strDate = "";
+
+
+	//usageFront
+	public String m_strHHmm = "";
+	public double m_dUsage = 0.0;
+	public double m_dUsageAvgHoliday = 0.0;
+	public double m_dUsageAvgWorkday = 0.0;
 
 	private String flag;
 

@@ -26,6 +26,10 @@
         android:usesCleartextTraffic="false">
         <activity android:name=".activity.ActivityPopUpLocked"></activity>
         <activity
+            android:name=".activity.ActivitySiteState2"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar.Dialog" />
+        <activity
             android:name=".activity.ActivitySiteStateDetail"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar.Dialog" />
