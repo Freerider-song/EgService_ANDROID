@@ -289,7 +289,7 @@ public class ActivityUsage extends BaseActivity implements IaResultHandler {
                     tvKwhDailyAvg.setText(CaApplication.m_Info.m_dfKwh.format(dKwhDailyAvg));
 
                     CaApplication.m_Info.m_nTransState=jo.getInt("trans_state");
-                    setTransState(CaApplication.m_Info.m_nTransState);
+                    //setTransState(CaApplication.m_Info.m_nTransState);
 
 
                 }

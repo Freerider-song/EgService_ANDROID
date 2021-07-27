@@ -27,6 +27,7 @@ import com.enernet.eg.R;
 import com.enernet.eg.ServiceMonitor;
 import com.enernet.eg.StringUtil;
 import com.enernet.eg.CaPref;
+import com.enernet.eg.Utils;
 import com.enernet.eg.model.CaDiscount;
 import com.enernet.eg.model.CaFamily;
 import com.enernet.eg.model.CaPrice;
@@ -62,6 +63,8 @@ public class ActivityLogin extends BaseActivity implements IaResultHandler {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+
+		Utils.setStatusBarColor(this,Utils.StatusBarColorType.MAIN_STATUS_BAR);
 
 		m_Context = getApplicationContext();
 		m_Pref = new CaPref(m_Context);

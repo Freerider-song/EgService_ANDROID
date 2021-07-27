@@ -2612,6 +2612,7 @@ id imageView28
 id imageView29
 id imageView3
 id imageView30
+id imageView31
 id imageView33
 id imageView4
 id imageView5
@@ -3012,6 +3013,8 @@ id tv_time_question
 id tv_time_update
 id tv_time_update3
 id tv_title
+id tv_title2
+id tv_title3
 id tv_trans_state
 id tv_won
 id tv_won_detail2

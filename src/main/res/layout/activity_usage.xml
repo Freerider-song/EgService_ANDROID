@@ -68,7 +68,7 @@
             android:id="@+id/tv_site_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="65dp"
             android:textColor="#FFFFFF"
             android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -546,28 +546,26 @@
                         android:id="@+id/textView32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:gravity="center|center_horizontal|center_vertical"
-                        android:text="우리아파트\n변압기 상태"
+                        android:text="우리아파트\n전기정보"
                         android:textColor="@color/eg_cyan_dark"
-                        android:textSize="14dp"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/iv_trans_state"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="56dp"
-                        android:layout_marginEnd="12dp"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitStart"
+                        android:id="@+id/imageView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="#200606"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/trans_normal" />
+                        app:srcCompat="@drawable/arrow" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout

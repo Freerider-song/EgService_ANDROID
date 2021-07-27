@@ -7,6 +7,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.enernet.eg.R;
+import com.enernet.eg.Utils;
 
 public class ActivitySplash extends BaseActivity {
 
@@ -23,9 +24,12 @@ public class ActivitySplash extends BaseActivity {
 		setContentView(R.layout.activity_splash);
 		TextView egService =findViewById(R.id.textView7);
 		TextView intro = findViewById(R.id.textView11);
-		Animation fadeIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
-		egService.startAnimation(fadeIn);
-		intro.startAnimation(fadeIn);
+		//Animation fadeIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
+		//egService.startAnimation(fadeIn);
+		//intro.startAnimation(fadeIn);
+
+		Utils.setStatusBarColor(this,Utils.StatusBarColorType.MAIN_STATUS_BAR);
+
 		nextIntent = new Intent(this, ActivityLogin.class);
 		splashThread = new Thread() {
 			@Override

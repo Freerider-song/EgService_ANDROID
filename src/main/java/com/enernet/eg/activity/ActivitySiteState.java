@@ -20,6 +20,7 @@ import com.enernet.eg.StringUtil;
 import com.enernet.eg.model.CaUsage;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -43,6 +44,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import static java.lang.Float.NaN;
 
 public class ActivitySiteState extends BaseActivity implements IaResultHandler {
 
@@ -119,9 +122,15 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         xAxis.setGranularity(0.3f);
 
         Legend lgd = m_HChart.getLegend();
+        lgd.setTypeface(tf);
         lgd.setDrawInside(false);
-        lgd.setFormSize(8f);
-        lgd.setXEntrySpace(4f);
+        lgd.setFormSize(13f);
+        lgd.setXEntrySpace(13f);
+        lgd.setTextSize(15f);
+        //lgd2.setXOffset(10f);
+        lgd.setYOffset(10f);
+        m_HChart.setExtraOffsets(5f,5f,5f,15f);
+
 
         m_LChart = findViewById(R.id.chartLine);
 
@@ -135,6 +144,7 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         m_LChart.setDoubleTapToZoomEnabled(true);
         m_LChart.setTouchEnabled(false);
 
+
         Typeface tf2 = Typeface.createFromAsset(getAssets(), StringUtil.getString(this, R.string.font_open_sans_regular));
 
         XAxis xAxis2 = m_LChart.getXAxis();
@@ -143,6 +153,7 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         xAxis2.setDrawAxisLine(true);
         xAxis2.setDrawGridLines(false);
         xAxis2.setGranularity(0.3f);
+        xAxis2.setLabelCount(5, true);
 
         YAxis yLeft2 = m_LChart.getAxisLeft();
         yLeft2.setTypeface(tf);
@@ -151,9 +162,23 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         xAxis2.setGranularity(0.3f);
 
         Legend lgd2 = m_LChart.getLegend();
+        lgd2.setTypeface(tf);
         lgd2.setDrawInside(false);
-        lgd2.setFormSize(8f);
-        lgd2.setXEntrySpace(4f);
+        lgd2.setFormSize(13f);
+        lgd2.setXEntrySpace(13f);
+        lgd2.setTextSize(15f);
+        //lgd2.setXOffset(10f);
+        lgd2.setYOffset(10f);
+        m_LChart.setExtraOffsets(5f,5f,5f,15f);
+/*
+        Description description = new Description();
+        description.setText("우리아파트 시간대별 사용량");
+        description.setTextSize(15);
+        description.setTypeface(tf);
+        description.setPosition(5f,5f);
+        m_LChart.setDescription(description);
+
+ */
     }
 
 
@@ -298,19 +323,23 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
                             Usage.m_nUnit=joUsage.getInt("unit");
                             Usage.m_strHHmm=joUsage.getString("hhmm");
                             if(joUsage.isNull("usage")){
-                                Usage.m_dUsage=0.0;
+                                //Usage.m_dUsage=0.0;
+                                Usage.m_dUsage=Double.NaN;
                             }
                             else{
                                 Usage.m_dUsage=joUsage.getDouble("usage");
+
                             }
                             if(joUsage.isNull("usage_avg_holiday")){
-                                Usage.m_dUsageAvgHoliday=0.0;
+                                //Usage.m_dUsageAvgHoliday=0.0;
+                                Usage.m_dUsageAvgHoliday=Double.NaN;
                             }
                             else{
                                 Usage.m_dUsageAvgHoliday=joUsage.getDouble("usage_avg_holiday");
                             }
                             if(joUsage.isNull("usage_avg_workday")){
-                                Usage.m_dUsageAvgWorkday=0.0;
+                                //Usage.m_dUsageAvgWorkday=0.0;
+                                Usage.m_dUsageAvgWorkday=Double.NaN;
                             }
                             else{
                                 Usage.m_dUsageAvgWorkday=joUsage.getDouble("usage_avg_workday");
@@ -350,7 +379,7 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
                             Usage.m_nUnit=joUsage.getInt("unit");
                             Usage.m_strDate = joUsage.getString("date");
                             if(joUsage.isNull("usage")){
-                                Usage.m_dUsage=0.0;
+                                Usage.m_dUsage= 0.0;
                             }
                             else{
                                 Usage.m_dUsage=joUsage.getDouble("usage");
@@ -386,7 +415,7 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         for (int i = 0; i <nCountUsage; i++) {
             CaUsage Usage=m_alLineUsage.get(i);
 
-            label.add((Usage.m_strHHmm));
+            label.add((Usage.m_strHHmm).substring(0,2) +"시");
         };
         return label;
     }
@@ -417,7 +446,11 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         for (int i=0; i<nCountUsage; i++) {
             CaUsage Usage=m_alLineUsage.get(i);
 
-            yValsKwhCurr.add(new Entry(Usage.m_nUnit, (float)Usage.m_dUsage));
+            if(!Double.isNaN(Usage.m_dUsage)){  //double nan 체크 성공
+
+                yValsKwhCurr.add(new Entry(Usage.m_nUnit, (float)Usage.m_dUsage));
+                Log.i("ActivitySiteState" ,"fusage is "+ Usage.m_dUsage);
+            }
             yValsKwhHoliday.add(new Entry(Usage.m_nUnit, (float)Usage.m_dUsageAvgHoliday));
             yValsKwhWorkday.add(new Entry(Usage.m_nUnit, (float)Usage.m_dUsageAvgWorkday));
 
@@ -451,11 +484,12 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
 
         XAxis xAxis = m_LChart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(getAreaCount()));
-        xAxis.setLabelCount(m_alLineUsage.size());
+        //xAxis.setLabelCount(m_alLineUsage.size());
+        xAxis.setLabelCount(7, true); //x축 라벨 갯수 제한
 
 
         LineDataSet setKwhCurr=new LineDataSet(yValsKwhCurr, "오늘 사용량");
-        setKwhCurr.setColor(getResources().getColor(R.color.chart_blue));
+        setKwhCurr.setColor(getResources().getColor(R.color.chart_red));
         setKwhCurr.setValueFormatter(vfKwhWithUnit);
         setKwhCurr.setMode(LineDataSet.Mode.CUBIC_BEZIER);
         setKwhCurr.setLineWidth(3f);
@@ -492,7 +526,9 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         m_LChart.getAxisRight().setEnabled(false);
         // m_LChart.groupBars(0.0f, fGroupSpace, fBarSpace);
 
-        m_LChart.getLegend().setEnabled(false);
+        m_LChart.getLegend().setEnabled(true);
+
+
 
         //가로바 차트 시작
 
@@ -523,8 +559,8 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         xAxis2.setValueFormatter(new IndexAxisValueFormatter(getAreaCount2()));
         xAxis2.setLabelCount(m_alDailyUsage.size());
 
-        BarDataSet setKwhDaily=new BarDataSet(yValsKwh, "사용량");
-        setKwhDaily.setValueFormatter(vfKwhWithUnit);
+        BarDataSet setKwhDaily=new BarDataSet(yValsKwh, "일일 전체 사용량");
+        setKwhDaily.setValueFormatter(vfKwh);
 
 
         BarData dataKwhDaily = new BarData(setKwhDaily);
@@ -541,8 +577,9 @@ public class ActivitySiteState extends BaseActivity implements IaResultHandler {
         m_HChart.setData(dataKwhDaily);
         m_HChart.getAxisLeft().setAxisMinimum(0f);
         m_HChart.getAxisRight().setEnabled(false);
-        m_HChart.getLegend().setEnabled(false);
+        m_HChart.getLegend().setEnabled(true);
         //usageBarChart.groupBars(0f, groupSpace, barSpace);
+
 
     }
 

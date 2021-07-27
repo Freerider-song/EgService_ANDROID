@@ -281,19 +281,49 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/back_site_state">
 
+                <TextView
+                    android:id="@+id/tv_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="▶ 아파트 시간대별 사용량"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="22dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="▶ 아파트 일별 사용량"
+                    android:textColor="@color/eg_cyan_dark"
+                    android:textSize="22dp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/chartHorizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chartLine" />
+
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/chartLine"
                     android:layout_width="0dp"
-                    android:layout_height="300dp"
+                    android:layout_height="350dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
                     android:background="@color/white"
-                    app:layout_constraintBottom_toTopOf="@+id/chartHorizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title2">
+
+                </com.github.mikephil.charting.charts.LineChart>
 
                 <com.github.mikephil.charting.charts.HorizontalBarChart
                     android:id="@+id/chartHorizontal"
@@ -305,8 +335,10 @@
                     android:background="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/chartLine" />
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                </com.github.mikephil.charting.charts.HorizontalBarChart>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
