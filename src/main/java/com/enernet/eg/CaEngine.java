@@ -1,5 +1,7 @@
 package com.enernet.eg;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import org.json.JSONException;
@@ -179,12 +181,17 @@ public class CaEngine {
 	public void CheckLogin(final String strMemberId, final String strPassword, Context Ctx, IaResultHandler ResultHandler) {
 		Log.i("ENGINE", "MemberId=" + strMemberId + ", Password=" + strPassword);
 
+		Calendar calToday = Calendar.getInstance();
+		calToday.add(Calendar.DATE, 0);
+		SimpleDateFormat myyyyMMddFormat = new SimpleDateFormat("yyMMdd");
+		String m_dtToday = myyyyMMddFormat.format(calToday.getTime())+"1";
+
 		CaArg Arg = new CaArg("CheckLogin", NO_CMD_ARGS, null);
 		Arg.addArg("MemberId", strMemberId);
 		Arg.addArg("Password", strPassword);
 		Arg.addArg("DeviceId", CaApplication.m_Info.m_strPushId);
 		Arg.addArg("Os", "ANDROID");
-		Arg.addArg("Version", 1911181);
+		Arg.addArg("Version", m_dtToday);
 
 		executeCommand(Arg, CB_CHECK_LOGIN, false, true, Ctx, ResultHandler);
 	}

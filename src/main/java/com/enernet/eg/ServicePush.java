@@ -7,11 +7,15 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.RemoteViews;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.enernet.eg.activity.ActivityAlarm;
 import com.enernet.eg.activity.ActivityLogin;
 import com.enernet.eg.activity.ActivityPopUpLocked;
@@ -22,6 +26,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Map;
 
 import static android.content.ContentValues.TAG;
@@ -54,6 +62,9 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
         String strTitle=data.get("title");
         String strBody=data.get("body");
         String strPushType=data.get("push_type");
+        String strImageURL = data.get("image");
+        Bitmap myBitmap = getImageFromURL(strImageURL);
+
         int nPushType=Integer.parseInt(strPushType);
 
         //Log.d("ServicePush", "from : " + strFrom);
@@ -61,6 +72,8 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
         Log.d("ServicePush", "title : " + strTitle);
         Log.d("ServicePush", "body : " + strBody);
         Log.d("ServicePush", "push_type : " + nPushType);
+        Log.d("ServicePush", "image : " + strImageURL);
+
 
         CaApplication.m_Engine.GetAlarmList(CaApplication.m_Info.m_nSeqMember, 20, this, this);
 
@@ -122,6 +135,12 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
             }
             break;
 
+            case 1200: {
+                Log.d("ServicePush", "AlarmImage Push received...");
+                notifyImage(strTitle,strBody, myBitmap, strImageURL);
+            }
+            break;
+
             default: {
                 Log.i("ServicePush", "Unknown push type : " + nPushType);
             }
@@ -130,21 +149,60 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
 
     }
 
-    private void notifyImage(String strTitle, String strBody, Bitmap myBitmap) {
-        Log.d("ServicePush", "notifyAlarmKwh called...");
+    public static Bitmap getImageFromURL(String imageURL){
+        Bitmap imgBitmap = null;
+        HttpURLConnection conn = null;
+        BufferedInputStream bis = null;
+
+        try
+        {
+            URL url = new URL(imageURL);
+            conn = (HttpURLConnection)url.openConnection();
+            conn.connect();
+
+            int nSize = conn.getContentLength();
+            bis = new BufferedInputStream(conn.getInputStream(), nSize);
+            imgBitmap = BitmapFactory.decodeStream(bis);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        } finally{
+            if(bis != null) {
+                try {bis.close();} catch (IOException e) {}
+            }
+            if(conn != null ) {
+                conn.disconnect();
+            }
+        }
+
+        return imgBitmap;
+    }
+
+
+    private void notifyImage(String strTitle, String strBody, Bitmap myBitmap, String strImageUrl) {
+        Log.d("ServicePush", "notifyAlarmImage called...");
 
         final int nNotiId=3186;
 
         Context ctx=getApplicationContext();
 
-        //Intent it=new Intent(ctx, ActivityLogin.class);
-        Intent it=new Intent(ctx, ActivityPopUpLocked.class)
-                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        Intent itPop=new Intent(ctx, ActivityPopUpLocked.class);
+        itPop.setAction(Intent.ACTION_MAIN);
+        itPop.addCategory(Intent.CATEGORY_LAUNCHER);
+        itPop.putExtra("content", strBody);
+        itPop.putExtra("image", strImageUrl);
+        PendingIntent pitPop = PendingIntent.getActivity(this,0,itPop,PendingIntent.FLAG_ONE_SHOT);
+        try {
+            pitPop.send();
+        } catch (PendingIntent.CanceledException e) {
+            e.printStackTrace();
+        }
+
+
+        Intent it=new Intent(ctx, ActivityAlarm.class);
         it.setAction(Intent.ACTION_MAIN);
         it.addCategory(Intent.CATEGORY_LAUNCHER);
-
-        // ActivityPopUplocked 실행
-        ctx.startActivity(it);
 
         PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
 
@@ -161,31 +219,86 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
                 notificationManager.createNotificationChannel(mChannel);
             }
 
+            RemoteViews custom_layout = new RemoteViews(getPackageName(), R.layout.custom_notification);
+            RemoteViews expanded_layout = new RemoteViews(getPackageName(), R.layout.custom_expanded);
+
+            custom_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            custom_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            custom_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            expanded_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            expanded_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            expanded_layout.setTextViewText(R.id.tv_push_content, strBody);
+
             NotificationCompat.Builder notificationBuilder =
                     new NotificationCompat.Builder(this, strChannelId)
                             .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
+                            .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                            .setCustomContentView(custom_layout)
+                            .setCustomBigContentView(expanded_layout)
+                            .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
                             .setContentText(strBody)
-                            .setContentIntent(pit)
+                            .setContentIntent(pit) // 알림 클릭 시 이벤트
                             .setAutoCancel(true)
                             .setOngoing(false)
                             .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                            .setVisibility(Notification.VISIBILITY_PUBLIC)
+                            /* bigpicture style
+                            .setContentTitle(strTitle)
+                            .setContentText(strBody)
                             .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap))
+
+                             */
+                            //set background color
+                            .setColor(getResources().getColor(R.color.white))
+                            .setColorized(true)
+
+
+
+
                     ;
 
             notificationManager.notify(nNotiId, notificationBuilder.build());
+
         }
         else {
+            RemoteViews custom_layout = new RemoteViews(getPackageName(), R.layout.custom_notification);
+            RemoteViews expanded_layout = new RemoteViews(getPackageName(), R.layout.custom_expanded);
+
+            custom_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            custom_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            custom_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            expanded_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            expanded_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            expanded_layout.setTextViewText(R.id.tv_push_content, strBody);
+
             NotificationCompat.Builder notificationBuilder =
                     new NotificationCompat.Builder(this, strChannelId)
                             .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
+                            .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                            .setCustomContentView(custom_layout)
+                            .setCustomBigContentView(expanded_layout)
+                            .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
                             .setContentText(strBody)
                             .setContentIntent(pit)
                             .setAutoCancel(true)
                             .setOngoing(false)
                             .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+
+                     /* bigpicture style
+                            .setContentTitle(strTitle)
+                            .setContentText(strBody)
                             .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap))
+
+                             */
+                            /* set background color
+                            .setColor(getResources().getColor(R.color.white))
+                            .setColorized(true)
+                            .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                            .setCustomContentView(notificationView)
+
+                             */
                     ;
 
             notificationManager.notify(nNotiId, notificationBuilder.build());

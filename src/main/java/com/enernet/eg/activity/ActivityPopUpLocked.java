@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.enernet.eg.R;
+import com.enernet.eg.ServicePush;
 import com.mikepenz.fastadapter.listeners.OnClickListener;
 
 public class ActivityPopUpLocked extends BaseActivity {
@@ -21,9 +22,6 @@ public class ActivityPopUpLocked extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pop_up_locked);
-
-        // 이 부분이 바로 화면을 깨우는 부분 되시겠다.
 
         // 화면이 잠겨있을 때 보여주기
 
@@ -36,11 +34,14 @@ public class ActivityPopUpLocked extends BaseActivity {
                 // 화면 켜기
 
                 | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+        setContentView(R.layout.activity_pop_up_locked);
+
 
         TextView tvContent = (TextView)findViewById(R.id.tv_push_content);
         tvContent.setText(getIntent().getStringExtra("content"));
         ImageView ivPush = (ImageView)findViewById(R.id.iv_push_image);
-        //ivPush.setImage
+        ivPush.setImageBitmap(ServicePush.getImageFromURL(getIntent().getStringExtra("image")));
+        Log.i("PopUpLocked", "image url = " + getIntent().getStringExtra("image"));
 
 
         Button btnNo = (Button)findViewById(R.id.btn_close);

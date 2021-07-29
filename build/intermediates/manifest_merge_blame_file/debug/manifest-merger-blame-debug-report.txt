@@ -43,484 +43,492 @@
 21    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 21-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:17:5-95
 21-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:17:22-92
-22
-23    <!-- Required by older versions of Google Play services to create IID tokens -->
-24    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-24-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:26:5-82
-24-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:26:22-79
-25
-26    <uses-feature
-26-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
-27        android:glEsVersion="0x00020000"
-27-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
-28        android:required="true" />
-28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
-29
-30    <queries>
-30-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
-31
-32        <!-- Needs to be explicitly declared on Android R+ -->
-33        <package android:name="com.google.android.apps.maps" />
-33-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
-33-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
-34    </queries>
-35
-36    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-36-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:26:5-110
-36-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:26:22-107
-37
-38    <application
-38-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:19:5-167:19
-39        android:name="com.enernet.eg.CaApplication"
-39-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:20:9-38
-40        android:allowBackup="false"
-40-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:21:9-36
-41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-41-->[androidx.core:core:1.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5641dfe254cec1c5fabae89670084a6e\core-1.2.0\AndroidManifest.xml:24:18-86
-42        android:debuggable="true"
-43        android:icon="@drawable/icon_main"
-43-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:22:9-43
-44        android:label="@string/app_name"
-44-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:23:9-41
-45        android:largeHeap="true"
-45-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:24:9-33
-46        android:testOnly="true"
-47        android:theme="@style/AppTheme.NoActionBar"
-47-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:25:9-52
-48        android:usesCleartextTraffic="false" >
-48-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:26:9-45
-49        <activity android:name="com.enernet.eg.activity.ActivityPopUpLocked" />
-49-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:27:9-75
-49-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:27:19-63
+22    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+22-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:18:5-77
+22-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:18:22-75
+23
+24    <!-- Required by older versions of Google Play services to create IID tokens -->
+25    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+25-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:26:5-82
+25-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:26:22-79
+26
+27    <uses-feature
+27-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
+28        android:glEsVersion="0x00020000"
+28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
+29        android:required="true" />
+29-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
+30
+31    <queries>
+31-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
+32
+33        <!-- Needs to be explicitly declared on Android R+ -->
+34        <package android:name="com.google.android.apps.maps" />
+34-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
+34-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
+35    </queries>
+36
+37    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+37-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:26:5-110
+37-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:26:22-107
+38
+39    <application
+39-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:20:5-171:19
+40        android:name="com.enernet.eg.CaApplication"
+40-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:21:9-38
+41        android:allowBackup="false"
+41-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:22:9-36
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\5641dfe254cec1c5fabae89670084a6e\core-1.2.0\AndroidManifest.xml:24:18-86
+43        android:debuggable="true"
+44        android:icon="@drawable/icon_main"
+44-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:23:9-43
+45        android:label="@string/app_name"
+45-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:24:9-41
+46        android:largeHeap="true"
+46-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:25:9-33
+47        android:testOnly="true"
+48        android:theme="@style/AppTheme.NoActionBar"
+48-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:26:9-52
+49        android:usesCleartextTraffic="false" >
+49-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:27:9-45
 50        <activity
-50-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:28:9-31:63
-51            android:name="com.enernet.eg.activity.ActivitySiteState2"
-51-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:29:13-56
+50-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:28:9-31:62
+51            android:name="com.enernet.eg.activity.ActivityPopUpLocked"
+51-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:29:13-57
 52            android:screenOrientation="portrait"
 52-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:30:13-49
 53            android:theme="@style/Theme.NoActionBar.Dialog" />
 53-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:31:13-60
 54        <activity
 54-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:32:9-35:63
-55            android:name="com.enernet.eg.activity.ActivitySiteStateDetail"
-55-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:33:13-61
+55            android:name="com.enernet.eg.activity.ActivitySiteState2"
+55-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:33:13-56
 56            android:screenOrientation="portrait"
 56-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:34:13-49
 57            android:theme="@style/Theme.NoActionBar.Dialog" />
 57-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:35:13-60
 58        <activity
 58-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:36:9-39:63
-59            android:name="com.enernet.eg.activity.ActivityUsageDetail"
-59-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:37:13-57
+59            android:name="com.enernet.eg.activity.ActivitySiteStateDetail"
+59-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:37:13-61
 60            android:screenOrientation="portrait"
 60-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:38:13-49
 61            android:theme="@style/Theme.NoActionBar.Dialog" />
 61-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:39:13-60
 62        <activity
-62-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:40:9-42:52
-63            android:name="com.enernet.eg.activity.ActivityWeb"
-63-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:41:13-49
-64            android:screenOrientation="portrait" />
+62-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:40:9-43:63
+63            android:name="com.enernet.eg.activity.ActivityUsageDetail"
+63-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:41:13-57
+64            android:screenOrientation="portrait"
 64-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:42:13-49
-65        <activity
-65-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:43:9-45:52
-66            android:name="com.enernet.eg.activity.ActivityQuestion"
-66-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:44:13-54
-67            android:screenOrientation="portrait" />
+65            android:theme="@style/Theme.NoActionBar.Dialog" />
+65-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:43:13-60
+66        <activity
+66-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:44:9-46:52
+67            android:name="com.enernet.eg.activity.ActivityWeb"
 67-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:45:13-49
-68        <activity
-68-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:46:9-48:52
-69            android:name="com.enernet.eg.activity.ActivityQna"
-69-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:47:13-49
-70            android:screenOrientation="portrait" />
-70-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:48:13-49
-71        <activity
-71-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:49:9-51:52
-72            android:name="com.enernet.eg.activity.ActivityFaq"
-72-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:50:13-49
-73            android:screenOrientation="portrait" />
+68            android:screenOrientation="portrait" />
+68-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:46:13-49
+69        <activity
+69-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:47:9-49:52
+70            android:name="com.enernet.eg.activity.ActivityQuestion"
+70-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:48:13-54
+71            android:screenOrientation="portrait" />
+71-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:49:13-49
+72        <activity
+72-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:50:9-52:52
+73            android:name="com.enernet.eg.activity.ActivityQna"
 73-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:51:13-49
-74        <activity
-74-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:52:9-54:52
-75            android:name="com.enernet.eg.activity.ActivityNotice"
-75-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:53:13-52
-76            android:screenOrientation="portrait" />
+74            android:screenOrientation="portrait" />
+74-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:52:13-49
+75        <activity
+75-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:53:9-55:52
+76            android:name="com.enernet.eg.activity.ActivityFaq"
 76-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:54:13-49
-77        <activity
-77-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:55:9-57:52
-78            android:name="com.enernet.eg.activity.ActivityPoint"
-78-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:56:13-51
-79            android:screenOrientation="portrait" />
-79-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:57:13-49
-80        <activity
-80-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:58:9-60:52
-81            android:name="com.enernet.eg.activity.ActivityQnaList"
-81-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:59:13-53
-82            android:screenOrientation="portrait" />
-82-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:60:13-49
-83        <activity
-83-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:61:9-63:52
-84            android:name="com.enernet.eg.activity.ActivityNoticeList"
-84-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:62:13-56
-85            android:screenOrientation="portrait" />
-85-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:63:13-49
-86        <activity
-86-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:64:9-66:52
-87            android:name="com.enernet.eg.activity.ActivityAlarm"
-87-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:65:13-51
-88            android:screenOrientation="portrait" />
-88-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:66:13-49
-89        <activity
-89-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:67:9-69:52
-90            android:name="com.enernet.eg.activity.ActivitySetting"
-90-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:68:13-53
-91            android:screenOrientation="portrait" />
-91-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:69:13-49
-92        <activity
-92-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:70:9-72:52
-93            android:name="com.enernet.eg.activity.ActivitySiteState"
-93-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:71:13-55
-94            android:screenOrientation="portrait" />
-94-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:72:13-49
-95        <activity
-95-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:73:9-75:52
-96            android:name="com.enernet.eg.activity.ActivityUsageYearly"
-96-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:74:13-57
-97            android:screenOrientation="portrait" />
-97-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:75:13-49
-98        <activity
-98-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:76:9-78:52
-99            android:name="com.enernet.eg.activity.ActivityUsageMonthly"
-99-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:77:13-58
-100            android:screenOrientation="portrait" />
-100-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:78:13-49
-101        <activity
-101-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:79:9-81:52
-102            android:name="com.enernet.eg.activity.ActivityUsageDaily"
-102-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:80:13-56
-103            android:screenOrientation="portrait" />
-103-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:81:13-49
-104        <activity
-104-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:82:9-85:71
-105            android:name="com.enernet.eg.activity.ActivityUsage"
-105-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:83:13-51
-106            android:screenOrientation="portrait"
-106-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:84:13-49
-107            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
-107-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:85:13-68
+77            android:screenOrientation="portrait" />
+77-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:55:13-49
+78        <activity
+78-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:56:9-58:52
+79            android:name="com.enernet.eg.activity.ActivityNotice"
+79-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:57:13-52
+80            android:screenOrientation="portrait" />
+80-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:58:13-49
+81        <activity
+81-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:59:9-61:52
+82            android:name="com.enernet.eg.activity.ActivityPoint"
+82-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:60:13-51
+83            android:screenOrientation="portrait" />
+83-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:61:13-49
+84        <activity
+84-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:62:9-64:52
+85            android:name="com.enernet.eg.activity.ActivityQnaList"
+85-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:63:13-53
+86            android:screenOrientation="portrait" />
+86-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:64:13-49
+87        <activity
+87-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:65:9-67:52
+88            android:name="com.enernet.eg.activity.ActivityNoticeList"
+88-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:66:13-56
+89            android:screenOrientation="portrait" />
+89-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:67:13-49
+90        <activity
+90-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:68:9-70:52
+91            android:name="com.enernet.eg.activity.ActivityAlarm"
+91-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:69:13-51
+92            android:screenOrientation="portrait" />
+92-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:70:13-49
+93        <activity
+93-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:71:9-73:52
+94            android:name="com.enernet.eg.activity.ActivitySetting"
+94-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:72:13-53
+95            android:screenOrientation="portrait" />
+95-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:73:13-49
+96        <activity
+96-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:74:9-76:52
+97            android:name="com.enernet.eg.activity.ActivitySiteState"
+97-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:75:13-55
+98            android:screenOrientation="portrait" />
+98-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:76:13-49
+99        <activity
+99-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:77:9-79:52
+100            android:name="com.enernet.eg.activity.ActivityUsageYearly"
+100-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:78:13-57
+101            android:screenOrientation="portrait" />
+101-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:79:13-49
+102        <activity
+102-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:80:9-82:52
+103            android:name="com.enernet.eg.activity.ActivityUsageMonthly"
+103-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:81:13-58
+104            android:screenOrientation="portrait" />
+104-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:82:13-49
+105        <activity
+105-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:83:9-85:52
+106            android:name="com.enernet.eg.activity.ActivityUsageDaily"
+106-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:84:13-56
+107            android:screenOrientation="portrait" />
+107-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:85:13-49
 108        <activity
-108-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:86:9-88:52
-109            android:name="com.enernet.eg.activity.ActivityChangePasswordInput"
-109-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:87:13-65
-110            android:screenOrientation="portrait" />
+108-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:86:9-89:71
+109            android:name="com.enernet.eg.activity.ActivityUsage"
+109-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:87:13-51
+110            android:screenOrientation="portrait"
 110-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:88:13-49
-111        <activity
-111-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:89:9-91:52
-112            android:name="com.enernet.eg.activity.ActivityChangePasswordAuth"
-112-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:90:13-64
-113            android:screenOrientation="portrait" />
-113-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:91:13-49
-114        <activity
-114-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:92:9-94:52
-115            android:name="com.enernet.eg.activity.ActivitySubscribedSub"
-115-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:93:13-59
-116            android:screenOrientation="portrait" />
-116-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:94:13-49
-117        <activity
-117-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:95:9-97:52
-118            android:name="com.enernet.eg.activity.ActivitySubscribedMain"
-118-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:96:13-60
-119            android:screenOrientation="portrait" />
-119-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:97:13-49
-120        <activity
-120-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:98:9-100:52
-121            android:name="com.enernet.eg.activity.ActivityAck"
-121-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:99:13-49
-122            android:screenOrientation="portrait" />
-122-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:100:13-49
-123        <activity
-123-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:101:9-103:52
-124            android:name="com.enernet.eg.activity.ActivitySubscribe"
-124-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:102:13-55
-125            android:screenOrientation="portrait" />
+111            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+111-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:89:13-68
+112        <activity
+112-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:90:9-92:52
+113            android:name="com.enernet.eg.activity.ActivityChangePasswordInput"
+113-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:91:13-65
+114            android:screenOrientation="portrait" />
+114-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:92:13-49
+115        <activity
+115-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:93:9-95:52
+116            android:name="com.enernet.eg.activity.ActivityChangePasswordAuth"
+116-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:94:13-64
+117            android:screenOrientation="portrait" />
+117-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:95:13-49
+118        <activity
+118-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:96:9-98:52
+119            android:name="com.enernet.eg.activity.ActivitySubscribedSub"
+119-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:97:13-59
+120            android:screenOrientation="portrait" />
+120-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:98:13-49
+121        <activity
+121-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:99:9-101:52
+122            android:name="com.enernet.eg.activity.ActivitySubscribedMain"
+122-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:100:13-60
+123            android:screenOrientation="portrait" />
+123-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:101:13-49
+124        <activity
+124-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:102:9-104:52
+125            android:name="com.enernet.eg.activity.ActivityAck"
 125-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:103:13-49
-126        <activity
-126-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:104:9-106:52
-127            android:name="com.enernet.eg.activity.ActivityCandidate"
-127-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:105:13-55
-128            android:screenOrientation="portrait" />
-128-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:106:13-49
-129        <activity
-129-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:107:9-109:52
-130            android:name="com.enernet.eg.activity.ActivityAuth"
-130-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:108:13-50
-131            android:screenOrientation="portrait" />
-131-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:109:13-49
-132        <activity
-132-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:110:9-118:20
-133            android:name="com.enernet.eg.activity.ActivitySplash"
-133-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:111:13-52
-134            android:screenOrientation="portrait" >
-134-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:112:13-49
-135            <intent-filter>
-135-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:113:13-117:29
-136                <action android:name="android.intent.action.MAIN" />
-136-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:114:17-69
-136-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:114:25-66
-137
-138                <category android:name="android.intent.category.LAUNCHER" />
-138-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:116:17-77
-138-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:116:27-74
-139            </intent-filter>
-140        </activity>
-141        <activity
-141-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:119:9-121:52
-142            android:name="com.enernet.eg.activity.ActivityLogin"
-142-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:120:13-51
-143            android:screenOrientation="portrait" />
-143-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:121:13-49
-144        <!--
-145        <receiver
-146            android:name="com.google.android.gcm.GCMBroadcastReceiver"
-147            android:permission="com.google.android.c2dm.permission.SEND">
-148            <intent-filter>
-149                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-150                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-151
-152                <category android:name="hemsms" />
-153            </intent-filter>
-154        </receiver>
-155        -->
-156        <receiver android:name="com.enernet.eg.ActionReceiver" />
-156-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:134:9-52
-156-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:134:19-49
-157        <receiver android:name="com.enernet.eg.ReceiverAlarm" />
-157-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:135:9-51
-157-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:135:19-48
-158        <receiver
-158-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:136:9-144:20
-159            android:name="com.enernet.eg.ReceiverReboot"
-159-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:137:13-43
-160            android:enabled="true"
-160-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:138:13-35
-161            android:exported="false"
-161-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:139:13-37
-162            android:process=":remote" >
-162-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:140:13-38
-163            <intent-filter>
-163-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:141:13-143:29
-164                <action android:name="android.intent.action.BOOT_COMPLETED" />
-164-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:142:17-79
-164-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:142:25-76
-165            </intent-filter>
-166        </receiver>
-167
-168        <service
-168-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:146:9-154:19
-169            android:name="com.enernet.eg.ServicePush"
-169-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:147:13-40
-170            android:enabled="true"
-170-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:148:13-35
-171            android:exported="true" >
-171-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:149:13-36
-172            <intent-filter>
-172-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:150:13-153:29
-173                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-173-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:151:17-78
-173-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:151:25-75
-174                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-174-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:152:17-80
-174-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:152:25-77
-175            </intent-filter>
-176        </service>
-177        <service
-177-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:155:9-158:39
-178            android:name="com.enernet.eg.ServiceRestarter"
-178-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:156:13-45
-179            android:enabled="true"
-179-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:157:13-35
-180            android:exported="true" />
-180-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:158:13-36
+126            android:screenOrientation="portrait" />
+126-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:104:13-49
+127        <activity
+127-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:105:9-107:52
+128            android:name="com.enernet.eg.activity.ActivitySubscribe"
+128-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:106:13-55
+129            android:screenOrientation="portrait" />
+129-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:107:13-49
+130        <activity
+130-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:108:9-110:52
+131            android:name="com.enernet.eg.activity.ActivityCandidate"
+131-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:109:13-55
+132            android:screenOrientation="portrait" />
+132-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:110:13-49
+133        <activity
+133-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:111:9-113:52
+134            android:name="com.enernet.eg.activity.ActivityAuth"
+134-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:112:13-50
+135            android:screenOrientation="portrait" />
+135-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:113:13-49
+136        <activity
+136-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:114:9-122:20
+137            android:name="com.enernet.eg.activity.ActivitySplash"
+137-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:115:13-52
+138            android:screenOrientation="portrait" >
+138-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:116:13-49
+139            <intent-filter>
+139-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:117:13-121:29
+140                <action android:name="android.intent.action.MAIN" />
+140-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:118:17-69
+140-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:118:25-66
+141
+142                <category android:name="android.intent.category.LAUNCHER" />
+142-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:120:17-77
+142-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:120:27-74
+143            </intent-filter>
+144        </activity>
+145        <activity
+145-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:123:9-125:52
+146            android:name="com.enernet.eg.activity.ActivityLogin"
+146-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:124:13-51
+147            android:screenOrientation="portrait" />
+147-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:125:13-49
+148        <!--
+149        <receiver
+150            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+151            android:permission="com.google.android.c2dm.permission.SEND">
+152            <intent-filter>
+153                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+154                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+155
+156                <category android:name="hemsms" />
+157            </intent-filter>
+158        </receiver>
+159        -->
+160        <receiver android:name="com.enernet.eg.ActionReceiver" />
+160-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:138:9-52
+160-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:138:19-49
+161        <receiver android:name="com.enernet.eg.ReceiverAlarm" />
+161-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:139:9-51
+161-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:139:19-48
+162        <receiver
+162-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:140:9-148:20
+163            android:name="com.enernet.eg.ReceiverReboot"
+163-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:141:13-43
+164            android:enabled="true"
+164-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:142:13-35
+165            android:exported="false"
+165-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:143:13-37
+166            android:process=":remote" >
+166-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:144:13-38
+167            <intent-filter>
+167-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:145:13-147:29
+168                <action android:name="android.intent.action.BOOT_COMPLETED" />
+168-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:146:17-79
+168-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:146:25-76
+169            </intent-filter>
+170        </receiver>
+171
+172        <service
+172-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:150:9-158:19
+173            android:name="com.enernet.eg.ServicePush"
+173-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:151:13-40
+174            android:enabled="true"
+174-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:152:13-35
+175            android:exported="true" >
+175-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:153:13-36
+176            <intent-filter>
+176-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:154:13-157:29
+177                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+177-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:155:17-78
+177-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:155:25-75
+178                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+178-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:156:17-80
+178-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:156:25-77
+179            </intent-filter>
+180        </service>
 181        <service
 181-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:159:9-162:39
-182            android:name="com.enernet.eg.ServiceMonitor"
-182-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:160:13-43
+182            android:name="com.enernet.eg.ServiceRestarter"
+182-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:160:13-45
 183            android:enabled="true"
 183-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:161:13-35
 184            android:exported="true" />
 184-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:162:13-36
-185
-186        <meta-data
-186-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:164:9-166:71
-187            android:name="com.enernet.eg"
-187-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:165:13-42
-188            android:value="AIzaSyDsq-ElrtvJ10Tume61LHHmRGM9yaEWGFU" />
-188-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:166:13-68
-189        <!--
-190             FirebaseMessagingService performs security checks at runtime,
-191             but set to not exported to explicitly avoid allowing another app to call it.
-192        -->
-193        <service
-193-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:28:9-35:19
-194            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-194-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:29:13-82
-195            android:directBootAware="true"
-195-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:30:13-43
-196            android:exported="false" >
-196-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:31:13-37
-197            <intent-filter android:priority="-500" >
-197-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:32:13-34:29
-197-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:32:28-51
-198                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-198-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:151:17-78
-198-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:151:25-75
-199            </intent-filter>
-200        </service>
-201        <service
-201-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:36:9-42:19
-202            android:name="com.google.firebase.components.ComponentDiscoveryService"
-202-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:37:13-84
-203            android:directBootAware="true"
-203-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
-204            android:exported="false" >
-204-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:38:13-37
-205            <meta-data
-205-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:39:13-41:85
-206                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-206-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:40:17-119
-207                android:value="com.google.firebase.components.ComponentRegistrar" />
-207-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:41:17-82
-208            <meta-data
-208-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
-209                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-209-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
-210                android:value="com.google.firebase.components.ComponentRegistrar" />
-210-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
-211            <meta-data
-211-->[com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:30:13-32:85
-212                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-212-->[com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:31:17-139
-213                android:value="com.google.firebase.components.ComponentRegistrar" />
-213-->[com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:32:17-82
-214            <meta-data
-214-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:32:13-34:85
-215                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-215-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:33:17-96
-216                android:value="com.google.firebase.components.ComponentRegistrar" />
-216-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:34:17-82
-217            <meta-data
-217-->[com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:17:13-19:85
-218                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-218-->[com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:18:17-127
-219                android:value="com.google.firebase.components.ComponentRegistrar" />
-219-->[com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:19:17-82
-220        </service>
-221        <service
-221-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
-222            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-222-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
-223            android:exported="false" >
-223-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
-224            <meta-data
-224-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
-225                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-225-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
-226                android:value="cct" />
-226-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
-227        </service>
-228        <service
-228-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
-229            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-229-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
-230            android:exported="false"
-230-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
-231            android:permission="android.permission.BIND_JOB_SERVICE" >
-231-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
-232        </service>
-233
-234        <receiver
-234-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
-235            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-235-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
-236            android:exported="false" />
-236-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
-237        <receiver
-237-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:37:9-44:20
-238            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-238-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:38:13-78
-239            android:exported="true"
-239-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:39:13-36
-240            android:permission="com.google.android.c2dm.permission.SEND" >
-240-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:40:13-73
-241            <intent-filter>
-241-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:41:13-43:29
-242                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-242-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:42:17-81
-242-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:42:25-78
-243            </intent-filter>
-244        </receiver>
-245
-246        <provider
-246-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
-247            android:name="com.google.firebase.provider.FirebaseInitProvider"
-247-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-248            android:authorities="com.enernet.eg.firebaseinitprovider"
-248-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
-249            android:exported="false"
-249-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
-250            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
-250-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
-251        <uses-library
-251-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
-252            android:name="org.apache.http.legacy"
-252-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
-253            android:required="false" />
-253-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
-254
-255        <activity
-255-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9a6075462e890917f0e9510f0e2c381c\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-256            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-256-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9a6075462e890917f0e9510f0e2c381c\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-257            android:exported="false"
-257-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9a6075462e890917f0e9510f0e2c381c\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-258            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-258-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9a6075462e890917f0e9510f0e2c381c\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-259
-260        <receiver
-260-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:29:9-33:20
-261            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-261-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:30:13-85
-262            android:enabled="true"
-262-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:31:13-35
-263            android:exported="false" >
-263-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:32:13-37
-264        </receiver>
-265
-266        <service
-266-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:35:9-38:40
-267            android:name="com.google.android.gms.measurement.AppMeasurementService"
-267-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:36:13-84
-268            android:enabled="true"
-268-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:37:13-35
-269            android:exported="false" />
-269-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:38:13-37
+185        <service
+185-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:163:9-166:39
+186            android:name="com.enernet.eg.ServiceMonitor"
+186-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:164:13-43
+187            android:enabled="true"
+187-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:165:13-35
+188            android:exported="true" />
+188-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:166:13-36
+189
+190        <meta-data
+190-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:168:9-170:71
+191            android:name="com.enernet.eg"
+191-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:169:13-42
+192            android:value="AIzaSyDsq-ElrtvJ10Tume61LHHmRGM9yaEWGFU" />
+192-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:170:13-68
+193        <!--
+194             FirebaseMessagingService performs security checks at runtime,
+195             but set to not exported to explicitly avoid allowing another app to call it.
+196        -->
+197        <service
+197-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:28:9-35:19
+198            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+198-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:29:13-82
+199            android:directBootAware="true"
+199-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:30:13-43
+200            android:exported="false" >
+200-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:31:13-37
+201            <intent-filter android:priority="-500" >
+201-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:32:13-34:29
+201-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:32:28-51
+202                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+202-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:155:17-78
+202-->C:\Users\enernet9\AndroidStudioProjects\EnerEg_0.9.2_2021_06_10_a\app\src\main\AndroidManifest.xml:155:25-75
+203            </intent-filter>
+204        </service>
+205        <service
+205-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:36:9-42:19
+206            android:name="com.google.firebase.components.ComponentDiscoveryService"
+206-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:37:13-84
+207            android:directBootAware="true"
+207-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+208            android:exported="false" >
+208-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:38:13-37
+209            <meta-data
+209-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:39:13-41:85
+210                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+210-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:40:17-119
+211                android:value="com.google.firebase.components.ComponentRegistrar" />
+211-->[com.google.firebase:firebase-messaging:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\85fbeeb25087650536a7d0e341e556b1\jetified-firebase-messaging-20.2.0\AndroidManifest.xml:41:17-82
+212            <meta-data
+212-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+213                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+213-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+214                android:value="com.google.firebase.components.ComponentRegistrar" />
+214-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\94223718a625cf1644982e58e8936f7a\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+215            <meta-data
+215-->[com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:30:13-32:85
+216                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+216-->[com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:31:17-139
+217                android:value="com.google.firebase.components.ComponentRegistrar" />
+217-->[com.google.android.gms:play-services-measurement-api:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\15962ec35ffc65a269d0da53a24c5f15\jetified-play-services-measurement-api-17.4.2\AndroidManifest.xml:32:17-82
+218            <meta-data
+218-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:32:13-34:85
+219                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+219-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:33:17-96
+220                android:value="com.google.firebase.components.ComponentRegistrar" />
+220-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:34:17-82
+221            <meta-data
+221-->[com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:17:13-19:85
+222                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+222-->[com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:18:17-127
+223                android:value="com.google.firebase.components.ComponentRegistrar" />
+223-->[com.google.firebase:firebase-installations:16.3.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\6237186d94b42d44ba53e358a9e5cbe5\jetified-firebase-installations-16.3.1\AndroidManifest.xml:19:17-82
+224        </service>
+225        <service
+225-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+226            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+226-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+227            android:exported="false" >
+227-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+228            <meta-data
+228-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+229                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+229-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+230                android:value="cct" />
+230-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\061a0323e7d2947330cdf1ae2ffe0636\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+231        </service>
+232        <service
+232-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+233            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+233-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+234            android:exported="false"
+234-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+235            android:permission="android.permission.BIND_JOB_SERVICE" >
+235-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+236        </service>
+237
+238        <receiver
+238-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+239            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+239-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
+240            android:exported="false" />
+240-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\359fc27aa5e47cf133b3fa3d00e2aa42\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+241        <receiver
+241-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:37:9-44:20
+242            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+242-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:38:13-78
+243            android:exported="true"
+243-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:39:13-36
+244            android:permission="com.google.android.c2dm.permission.SEND" >
+244-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:40:13-73
+245            <intent-filter>
+245-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:41:13-43:29
+246                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+246-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:42:17-81
+246-->[com.google.firebase:firebase-iid:20.2.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4cdcd63abb1f617c0442fdb068447002\jetified-firebase-iid-20.2.0\AndroidManifest.xml:42:25-78
+247            </intent-filter>
+248        </receiver>
+249
+250        <provider
+250-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+251            android:name="com.google.firebase.provider.FirebaseInitProvider"
+251-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+252            android:authorities="com.enernet.eg.firebaseinitprovider"
+252-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+253            android:exported="false"
+253-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+254            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
+254-->[com.google.firebase:firebase-common:19.3.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\7ce2e0fcddac3663cefef2a5b5fab04b\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+255        <uses-library
+255-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+256            android:name="org.apache.http.legacy"
+256-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
+257            android:required="false" />
+257-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\dfef083b6e062fd7b8670f51feac5984\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+258
+259        <activity
+259-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9a6075462e890917f0e9510f0e2c381c\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+260            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+260-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9a6075462e890917f0e9510f0e2c381c\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+261            android:exported="false"
+261-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9a6075462e890917f0e9510f0e2c381c\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+262            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+262-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\9a6075462e890917f0e9510f0e2c381c\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+263
+264        <receiver
+264-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:29:9-33:20
+265            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+265-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:30:13-85
+266            android:enabled="true"
+266-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:31:13-35
+267            android:exported="false" >
+267-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:32:13-37
+268        </receiver>
+269
 270        <service
-270-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:39:9-43:72
-271            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-271-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:40:13-87
+270-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:35:9-38:40
+271            android:name="com.google.android.gms.measurement.AppMeasurementService"
+271-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:36:13-84
 272            android:enabled="true"
-272-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:41:13-35
-273            android:exported="false"
-273-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:42:13-37
-274            android:permission="android.permission.BIND_JOB_SERVICE" />
-274-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:43:13-69
-275
-276        <meta-data
-276-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4a400d11c0a160fcbf44ab8bd6c18d16\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
-277            android:name="com.google.android.gms.version"
-277-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4a400d11c0a160fcbf44ab8bd6c18d16\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
-278            android:value="@integer/google_play_services_version" />
-278-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4a400d11c0a160fcbf44ab8bd6c18d16\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
-279    </application>
-280
-281</manifest>
+272-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:37:13-35
+273            android:exported="false" />
+273-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:38:13-37
+274        <service
+274-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:39:9-43:72
+275            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+275-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:40:13-87
+276            android:enabled="true"
+276-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:41:13-35
+277            android:exported="false"
+277-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:42:13-37
+278            android:permission="android.permission.BIND_JOB_SERVICE" />
+278-->[com.google.android.gms:play-services-measurement:17.4.2] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\32634ec6ef97714f89caf84466e863e8\jetified-play-services-measurement-17.4.2\AndroidManifest.xml:43:13-69
+279
+280        <meta-data
+280-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4a400d11c0a160fcbf44ab8bd6c18d16\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+281            android:name="com.google.android.gms.version"
+281-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4a400d11c0a160fcbf44ab8bd6c18d16\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+282            android:value="@integer/google_play_services_version" />
+282-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\enernet9\.gradle\caches\transforms-2\files-2.1\4a400d11c0a160fcbf44ab8bd6c18d16\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+283    </application>
+284
+285</manifest>

@@ -2206,6 +2206,7 @@ drawable setting_user_phone
 drawable shape_round_corner_dark_cyan_filled
 drawable shape_round_corner_dark_cyan_filled_2
 drawable shape_round_corner_dark_cyan_hollow
+drawable shape_round_corner_dark_gray_stroke
 drawable shape_round_corner_dark_yellow_filled
 drawable shape_round_corner_filled_yellow_a
 drawable shape_round_corner_filled_yellow_b
@@ -2562,6 +2563,7 @@ id footer
 id forever
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id gray_bar
 id group_divider
@@ -2571,6 +2573,7 @@ id guideline2
 id guideline3
 id guideline4
 id guideline5
+id guideline6
 id guideline_alarm
 id header
 id hideable
@@ -2644,6 +2647,7 @@ id iv_kwh_percent
 id iv_new
 id iv_noti_type
 id iv_notice_type
+id iv_push
 id iv_push_image
 id iv_right_arrow
 id iv_trans_state
@@ -2999,6 +3003,7 @@ id tv_phone_number
 id tv_point
 id tv_price_level
 id tv_push_content
+id tv_push_title
 id tv_qna_state
 id tv_question
 id tv_read_day
@@ -3142,6 +3147,8 @@ layout activity_web
 layout contact_spinner_row_nothing_selected
 layout content_activity_usage
 layout custom_dialog
+layout custom_expanded
+layout custom_notification
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

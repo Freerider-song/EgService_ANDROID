@@ -28,12 +28,12 @@
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\shape_round_corner_white_filled_2.xml"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_used_btn_dayweek.png.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\used_btn_dayweek.png"
-    },
-    {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_used_btn_dayweek.png.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\used_btn_dayweek.png"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_box_top.png.flat",
@@ -48,12 +48,12 @@
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\xml_btn_cancel.xml"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_usage_day.png.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\usage_day.png"
-    },
-    {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_no.png.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\btn_no.png"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_usage_day.png.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\usage_day.png"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_trans_danger.png.flat",
@@ -104,12 +104,12 @@
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\used_btn_day.png"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_alarm.xml.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\layout\\activity_alarm.xml"
-    },
-    {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tax_txt3.png.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\tax_txt3.png"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_alarm.xml.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\layout\\activity_alarm.xml"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting_home.png.flat",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable-mdpi\\create_contact.png"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_activity_auth.xml.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\menu\\menu_activity_auth.xml"
-    },
-    {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_char_lady.png.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\char_lady.png"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_activity_auth.xml.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\menu\\menu_activity_auth.xml"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\menu_radar.xml.flat",
@@ -206,6 +206,10 @@
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_small_password.png.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\small_password.png"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_notification.xml.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\layout\\custom_notification.xml"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_top_alarm.png.flat",
@@ -316,16 +320,16 @@
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\menu\\realtime.xml"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_used_won.png.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\used_won.png"
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_know_mark.png.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\know_mark.png"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_box_bottom.png.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\round_box_bottom.png"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_know_mark.png.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\know_mark.png"
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_used_won.png.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\used_won.png"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_header_eg_large.png.flat",
@@ -400,12 +404,12 @@
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\layout\\activity_pop_up_locked.xml"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting_logout.png.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\setting_logout.png"
-    },
-    {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_usage_week.png.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\usage_week.png"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting_logout.png.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\setting_logout.png"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_title_used_day.png.flat",
@@ -440,12 +444,12 @@
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\setting_round_box.png"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_new_icon.png.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\new_icon.png"
-    },
-    {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alarm_on.png.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\alarm_on.png"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_new_icon.png.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\new_icon.png"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_subscribed_sub.xml.flat",
@@ -544,16 +548,16 @@
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\shape_round_corner_gray_hollow.xml"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_energy_06.png.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\energy_06.png"
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background.png.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable-mdpi\\background.png"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_menu_qna.png.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\menu_qna.png"
     },
     {
-        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background.png.flat",
-        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable-mdpi\\background.png"
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_energy_06.png.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\energy_06.png"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_btn_test1.9.png.flat",
@@ -918,6 +922,10 @@
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\layout_eg_list_item_notice.xml.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\layout\\eg_list_item_notice.xml"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_round_corner_dark_gray_stroke.xml.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\drawable\\shape_round_corner_dark_gray_stroke.xml"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_xml_content_border.xml.flat",
@@ -1306,6 +1314,10 @@
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_usage.xml.flat",
         "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\layout\\activity_usage.xml"
+    },
+    {
+        "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_expanded.xml.flat",
+        "source": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\src\\main\\res\\layout\\custom_expanded.xml"
     },
     {
         "merged": "C:\\Users\\enernet9\\AndroidStudioProjects\\EnerEg_0.9.2_2021_06_10_a\\app\\build\\intermediates\\res\\merged\\debug\\drawable_main_btn_used.png.flat",

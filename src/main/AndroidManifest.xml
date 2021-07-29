@@ -15,6 +15,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
         android:name=".CaApplication"
@@ -24,7 +25,10 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="false">
-        <activity android:name=".activity.ActivityPopUpLocked"></activity>
+        <activity
+            android:name=".activity.ActivityPopUpLocked"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar.Dialog"/>
         <activity
             android:name=".activity.ActivitySiteState2"
             android:screenOrientation="portrait"
