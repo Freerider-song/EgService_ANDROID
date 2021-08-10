@@ -36,4 +36,7 @@ public class CaArg {
     {
         args.add(new Pair<>(strKey, bValue ? "1" : "0"));
     }
+    public void addArg(String strKey, ArrayList<Integer> alValue){
+        args.add(new Pair<>(strKey, alValue.toString().replace("[","").replace("]","")));
+    }
 }

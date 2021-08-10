@@ -4,12 +4,16 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Build;
 import androidx.core.app.NotificationCompat;
+
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RemoteViews;
@@ -33,6 +37,7 @@ import java.net.URL;
 import java.util.Map;
 
 import static android.content.ContentValues.TAG;
+import static androidx.core.app.ActivityCompat.startActivityForResult;
 
 public class ServicePush extends FirebaseMessagingService implements IaResultHandler {
 
@@ -42,6 +47,8 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
 
         Log.e("Firebase", "FirebaseInstanceIDService : " + s);
     }
+
+
 
     @Override
     public void onMessageReceived(RemoteMessage rm) {
@@ -63,7 +70,7 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
         String strBody=data.get("body");
         String strPushType=data.get("push_type");
         String strImageURL = data.get("image");
-        Bitmap myBitmap = getImageFromURL(strImageURL);
+
 
         int nPushType=Integer.parseInt(strPushType);
 
@@ -107,37 +114,37 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
 
             case CaEngine.ALARM_TYPE_NOTI_KWH: {
                 Log.d("ServicePush", "AlarmKwh Push received...");
-                notifyAlarmKwh(strTitle, strBody);
+                notifyAlarmKwh(strTitle, strBody, strImageURL);
             }
             break;
 
             case CaEngine.ALARM_TYPE_NOTI_WON: {
                 Log.d("ServicePush", "AlarmWon Push received...");
-                notifyAlarmWon(strTitle, strBody);
+                notifyAlarmWon(strTitle, strBody, strImageURL);
             }
             break;
 
             case CaEngine.ALARM_TYPE_NOTI_PRICE_LEVEL: {
                 Log.d("ServicePush", "AlarmPriceLevel Push received...");
-                notifyAlarmPriceLevel(strTitle, strBody);
+                notifyAlarmPriceLevel(strTitle, strBody, strImageURL);
             }
             break;
 
             case CaEngine.ALARM_TYPE_NOTI_USAGE: {
                 Log.d("ServicePush", "AlarmUsage Push received...");
-                notifyAlarmUsage(strTitle, strBody);
+                notifyAlarmUsage(strTitle, strBody, strImageURL);
             }
             break;
 
             case CaEngine.ALARM_TYPE_NOTI_TRANS: {
                 Log.d("ServicePush", "AlarmTrans Push received...");
-                notifyAlarmTrans(strTitle, strBody);
+                notifyAlarmTrans(strTitle, strBody, strImageURL);
             }
             break;
 
             case 1200: {
                 Log.d("ServicePush", "AlarmImage Push received...");
-                notifyImage(strTitle,strBody, myBitmap, strImageURL);
+                notifyImage(strTitle, strBody, strImageURL);
             }
             break;
 
@@ -179,7 +186,7 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
     }
 
 
-    private void notifyImage(String strTitle, String strBody, Bitmap myBitmap, String strImageUrl) {
+    private void notifyImage(String strTitle, String strBody, String strImageUrl) {
         Log.d("ServicePush", "notifyAlarmImage called...");
 
         final int nNotiId=3186;
@@ -188,11 +195,17 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
 
 
         Intent itPop=new Intent(ctx, ActivityPopUpLocked.class);
-        itPop.setAction(Intent.ACTION_MAIN);
+
+        itPop.setAction(Intent.ACTION_NEW_OUTGOING_CALL);
         itPop.addCategory(Intent.CATEGORY_LAUNCHER);
+        itPop.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        itPop.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         itPop.putExtra("content", strBody);
         itPop.putExtra("image", strImageUrl);
-        PendingIntent pitPop = PendingIntent.getActivity(this,0,itPop,PendingIntent.FLAG_ONE_SHOT);
+
+        //ctx.startActivity(itPop);
+
+        PendingIntent pitPop = PendingIntent.getActivity(this,0,itPop,PendingIntent.FLAG_UPDATE_CURRENT);
         try {
             pitPop.send();
         } catch (PendingIntent.CanceledException e) {
@@ -209,6 +222,8 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         String strChannelId="1234";
+
+        Bitmap myBitmap = getImageFromURL(strImageUrl);
 
         if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
 
@@ -238,10 +253,13 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
                             .setCustomBigContentView(expanded_layout)
                             .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
                             .setContentText(strBody)
-                            .setContentIntent(pit) // 알림 클릭 시 이벤트
+                            .setContentIntent(pitPop) // 알림 클릭 시 이벤트
                             .setAutoCancel(true)
                             .setOngoing(false)
                             .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                            .setPriority(NotificationCompat.PRIORITY_HIGH)
+
+                            //.setCategory(NotificationCompat.CATEGORY_CALL)  계속 폰콜처럼 떠있음
                             .setVisibility(Notification.VISIBILITY_PUBLIC)
                             /* bigpicture style
                             .setContentTitle(strTitle)
@@ -252,9 +270,7 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
                             //set background color
                             .setColor(getResources().getColor(R.color.white))
                             .setColorized(true)
-
-
-
+                            //.setFullScreenIntent(pitPop, true)
 
                     ;
 
@@ -281,25 +297,25 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
                             .setCustomBigContentView(expanded_layout)
                             .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
                             .setContentText(strBody)
-                            .setContentIntent(pit)
+                            .setContentIntent(pitPop) // 알림 클릭 시 이벤트
                             .setAutoCancel(true)
                             .setOngoing(false)
                             .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                            .setPriority(NotificationCompat.PRIORITY_HIGH)
 
-                     /* bigpicture style
+                            //.setCategory(NotificationCompat.CATEGORY_CALL)  계속 폰콜처럼 떠있음
+                            .setVisibility(Notification.VISIBILITY_PUBLIC)
+                            /* bigpicture style
                             .setContentTitle(strTitle)
                             .setContentText(strBody)
                             .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(myBitmap))
 
                              */
-                            /* set background color
+                            //set background color
                             .setColor(getResources().getColor(R.color.white))
                             .setColorized(true)
-                            .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
-                            .setCustomContentView(notificationView)
-
-                             */
-                    ;
+            //.setFullScreenIntent(pitPop, true)
+            ;
 
             notificationManager.notify(nNotiId, notificationBuilder.build());
         }
@@ -553,286 +569,777 @@ public class ServicePush extends FirebaseMessagingService implements IaResultHan
 
     }
 
-    private void notifyAlarmKwh(String strTitle, String strBody) {
+    private void notifyAlarmKwh(String strTitle, String strBody, String strImageURL) {
+
+
         Log.d("ServicePush", "notifyAlarmKwh called...");
 
         final int nNotiId=3186;
 
         Context ctx=getApplicationContext();
 
-        //Intent it=new Intent(ctx, ActivityLogin.class);
-        Intent it=new Intent(ctx, ActivityAlarm.class);
-        it.setAction(Intent.ACTION_MAIN);
-        it.addCategory(Intent.CATEGORY_LAUNCHER);
+        if(strImageURL !=null){
 
-        PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+            Intent itPop=new Intent(ctx, ActivityPopUpLocked.class);
 
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        String strChannelId="1234";
-
-        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
-
-            NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
-            if (mChannel == null) {
-                mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
-                notificationManager.createNotificationChannel(mChannel);
+            itPop.setAction(Intent.ACTION_NEW_OUTGOING_CALL);
+            itPop.addCategory(Intent.CATEGORY_LAUNCHER);
+            itPop.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            itPop.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            itPop.putExtra("content", strBody);
+            itPop.putExtra("image", strImageURL);
+            PendingIntent pitPop = PendingIntent.getActivity(this,0,itPop,PendingIntent.FLAG_UPDATE_CURRENT);
+            try {
+                pitPop.send();
+            } catch (PendingIntent.CanceledException e) {
+                e.printStackTrace();
             }
 
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+            Intent it=new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId="1234";
+
+            Bitmap myBitmap = getImageFromURL(strImageURL);
+            RemoteViews custom_layout = new RemoteViews(getPackageName(), R.layout.custom_notification);
+            RemoteViews expanded_layout = new RemoteViews(getPackageName(), R.layout.custom_expanded);
+
+            custom_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            custom_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            custom_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            expanded_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            expanded_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            expanded_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    //IMPORTANCE_HIGH 여야 헤드업 알림 가능
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            }
+            else {
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
+
         }
         else {
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            //Intent it=new Intent(ctx, ActivityLogin.class);
+            Intent it = new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit = PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId = "1234";
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            } else {
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
         }
 
 
     }
 
-    private void notifyAlarmWon(String strTitle, String strBody) {
+    private void notifyAlarmWon(String strTitle, String strBody, String strImageURL) {
         Log.d("ServicePush", "notifyAlarmWon called...");
 
         final int nNotiId=3186;
 
         Context ctx=getApplicationContext();
 
-        //Intent it=new Intent(ctx, ActivityLogin.class);
-        Intent it=new Intent(ctx, ActivityAlarm.class);
-        it.setAction(Intent.ACTION_MAIN);
-        it.addCategory(Intent.CATEGORY_LAUNCHER);
+        if(strImageURL !=null){
 
-        PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+            Intent itPop=new Intent(ctx, ActivityPopUpLocked.class);
 
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        String strChannelId="1234";
-
-        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
-
-            NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
-            if (mChannel == null) {
-                mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
-                notificationManager.createNotificationChannel(mChannel);
+            itPop.setAction(Intent.ACTION_NEW_OUTGOING_CALL);
+            itPop.addCategory(Intent.CATEGORY_LAUNCHER);
+            itPop.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            itPop.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            itPop.putExtra("content", strBody);
+            itPop.putExtra("image", strImageURL);
+            PendingIntent pitPop = PendingIntent.getActivity(this,0,itPop,PendingIntent.FLAG_UPDATE_CURRENT);
+            try {
+                pitPop.send();
+            } catch (PendingIntent.CanceledException e) {
+                e.printStackTrace();
             }
 
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+            Intent it=new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId="1234";
+
+            Bitmap myBitmap = getImageFromURL(strImageURL);
+            RemoteViews custom_layout = new RemoteViews(getPackageName(), R.layout.custom_notification);
+            RemoteViews expanded_layout = new RemoteViews(getPackageName(), R.layout.custom_expanded);
+
+            custom_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            custom_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            custom_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            expanded_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            expanded_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            expanded_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    //IMPORTANCE_HIGH 여야 헤드업 알림 가능
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            }
+            else {
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
+
         }
         else {
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            //Intent it=new Intent(ctx, ActivityLogin.class);
+            Intent it = new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit = PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId = "1234";
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            } else {
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
         }
 
 
     }
 
-    private void notifyAlarmPriceLevel(String strTitle, String strBody) {
+    private void notifyAlarmPriceLevel(String strTitle, String strBody, String strImageURL) {
         Log.d("ServicePush", "notifyAlarmPriceLevel called...");
 
         final int nNotiId=3186;
-
         Context ctx=getApplicationContext();
 
-        //Intent it=new Intent(ctx, ActivityLogin.class);
-        Intent it=new Intent(ctx, ActivityAlarm.class);
-        it.setAction(Intent.ACTION_MAIN);
-        it.addCategory(Intent.CATEGORY_LAUNCHER);
+        if(strImageURL !=null){
 
-        PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+            Intent itPop=new Intent(ctx, ActivityPopUpLocked.class);
 
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        String strChannelId="1234";
-
-        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
-
-            NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
-            if (mChannel == null) {
-                mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
-                notificationManager.createNotificationChannel(mChannel);
+            itPop.setAction(Intent.ACTION_NEW_OUTGOING_CALL);
+            itPop.addCategory(Intent.CATEGORY_LAUNCHER);
+            itPop.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            itPop.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            itPop.putExtra("content", strBody);
+            itPop.putExtra("image", strImageURL);
+            PendingIntent pitPop = PendingIntent.getActivity(this,0,itPop,PendingIntent.FLAG_UPDATE_CURRENT);
+            try {
+                pitPop.send();
+            } catch (PendingIntent.CanceledException e) {
+                e.printStackTrace();
             }
 
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+            Intent it=new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId="1234";
+
+            Bitmap myBitmap = getImageFromURL(strImageURL);
+            RemoteViews custom_layout = new RemoteViews(getPackageName(), R.layout.custom_notification);
+            RemoteViews expanded_layout = new RemoteViews(getPackageName(), R.layout.custom_expanded);
+
+            custom_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            custom_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            custom_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            expanded_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            expanded_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            expanded_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    //IMPORTANCE_HIGH 여야 헤드업 알림 가능
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            }
+            else {
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
+
         }
         else {
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            //Intent it=new Intent(ctx, ActivityLogin.class);
+            Intent it = new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit = PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId = "1234";
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            } else {
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
         }
 
     }
 
-    private void notifyAlarmUsage(String strTitle, String strBody) {
+    private void notifyAlarmUsage(String strTitle, String strBody, String strImageURL) {
         Log.d("ServicePush", "notifyAlarmUsage called...");
 
         final int nNotiId=3186;
 
         Context ctx=getApplicationContext();
 
-        //Intent it=new Intent(ctx, ActivityLogin.class);
-        Intent it=new Intent(ctx, ActivityAlarm.class);
-        it.setAction(Intent.ACTION_MAIN);
-        it.addCategory(Intent.CATEGORY_LAUNCHER);
+        if(strImageURL !=null){
 
-        PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+            Intent itPop=new Intent(ctx, ActivityPopUpLocked.class);
 
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        String strChannelId="1234";
-
-        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
-
-            NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
-            if (mChannel == null) {
-                mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
-                notificationManager.createNotificationChannel(mChannel);
+            itPop.setAction(Intent.ACTION_NEW_OUTGOING_CALL);
+            itPop.addCategory(Intent.CATEGORY_LAUNCHER);
+            itPop.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            itPop.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            itPop.putExtra("content", strBody);
+            itPop.putExtra("image", strImageURL);
+            PendingIntent pitPop = PendingIntent.getActivity(this,0,itPop,PendingIntent.FLAG_UPDATE_CURRENT);
+            try {
+                pitPop.send();
+            } catch (PendingIntent.CanceledException e) {
+                e.printStackTrace();
             }
 
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+            Intent it=new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId="1234";
+
+            Bitmap myBitmap = getImageFromURL(strImageURL);
+            RemoteViews custom_layout = new RemoteViews(getPackageName(), R.layout.custom_notification);
+            RemoteViews expanded_layout = new RemoteViews(getPackageName(), R.layout.custom_expanded);
+
+            custom_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            custom_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            custom_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            expanded_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            expanded_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            expanded_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    //IMPORTANCE_HIGH 여야 헤드업 알림 가능
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            }
+            else {
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
+
         }
         else {
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            //Intent it=new Intent(ctx, ActivityLogin.class);
+            Intent it = new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit = PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId = "1234";
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            } else {
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
         }
 
 
     }
 
 
-    private void notifyAlarmTrans(String strTitle, String strBody) {
+    private void notifyAlarmTrans(String strTitle, String strBody, String strImageURL) {
         Log.d("ServicePush", "notifyAlarmTrans called...");
 
         final int nNotiId=3186;
 
         Context ctx=getApplicationContext();
 
-        //Intent it=new Intent(ctx, ActivityLogin.class);
-        Intent it=new Intent(ctx, ActivityAlarm.class);
-        it.setAction(Intent.ACTION_MAIN);
-        it.addCategory(Intent.CATEGORY_LAUNCHER);
+        if(strImageURL !=null){
 
-        PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+            Intent itPop=new Intent(ctx, ActivityPopUpLocked.class);
 
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        String strChannelId="1234";
-
-        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
-
-            NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
-            if (mChannel == null) {
-                mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
-                notificationManager.createNotificationChannel(mChannel);
+            itPop.setAction(Intent.ACTION_NEW_OUTGOING_CALL);
+            itPop.addCategory(Intent.CATEGORY_LAUNCHER);
+            itPop.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            itPop.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            itPop.putExtra("content", strBody);
+            itPop.putExtra("image", strImageURL);
+            PendingIntent pitPop = PendingIntent.getActivity(this,0,itPop,PendingIntent.FLAG_UPDATE_CURRENT);
+            try {
+                pitPop.send();
+            } catch (PendingIntent.CanceledException e) {
+                e.printStackTrace();
             }
 
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+            Intent it=new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit=PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId="1234";
+
+            Bitmap myBitmap = getImageFromURL(strImageURL);
+            RemoteViews custom_layout = new RemoteViews(getPackageName(), R.layout.custom_notification);
+            RemoteViews expanded_layout = new RemoteViews(getPackageName(), R.layout.custom_expanded);
+
+            custom_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            custom_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            custom_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            expanded_layout.setImageViewBitmap(R.id.iv_push, myBitmap);
+            expanded_layout.setTextViewText(R.id.tv_push_title, strTitle);
+            expanded_layout.setTextViewText(R.id.tv_push_content, strBody);
+
+            if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    //IMPORTANCE_HIGH 여야 헤드업 알림 가능
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            }
+            else {
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                                .setCustomContentView(custom_layout)
+                                .setCustomBigContentView(expanded_layout)
+                                .setContentTitle(strTitle) //헤드업 메시지 제목과 내용 표시
+                                .setContentText(strBody)
+                                .setContentIntent(pitPop) // 알림 클릭 시 이벤트
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
+                                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                                .setVisibility(Notification.VISIBILITY_PUBLIC)
+                                .setColor(getResources().getColor(R.color.white))
+                                .setColorized(true)
+
+                        ;
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
+
         }
         else {
-            NotificationCompat.Builder notificationBuilder =
-                    new NotificationCompat.Builder(this, strChannelId)
-                            .setSmallIcon(R.drawable.push_icon)
-                            .setContentTitle(strTitle)
-                            .setContentText(strBody)
-                            .setContentIntent(pit)
-                            .setAutoCancel(true)
-                            .setOngoing(false)
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE)
-                    ;
 
-            notificationManager.notify(nNotiId, notificationBuilder.build());
+
+            //Intent it=new Intent(ctx, ActivityLogin.class);
+            Intent it = new Intent(ctx, ActivityAlarm.class);
+            it.setAction(Intent.ACTION_MAIN);
+            it.addCategory(Intent.CATEGORY_LAUNCHER);
+
+            PendingIntent pit = PendingIntent.getActivity(this, 0, it, 0);
+
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            String strChannelId = "1234";
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+                NotificationChannel mChannel = notificationManager.getNotificationChannel(strChannelId);
+                if (mChannel == null) {
+                    mChannel = new NotificationChannel(strChannelId, strTitle, NotificationManager.IMPORTANCE_HIGH);
+                    notificationManager.createNotificationChannel(mChannel);
+                }
+
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            } else {
+                NotificationCompat.Builder notificationBuilder =
+                        new NotificationCompat.Builder(this, strChannelId)
+                                .setSmallIcon(R.drawable.push_icon)
+                                .setContentTitle(strTitle)
+                                .setContentText(strBody)
+                                .setContentIntent(pit)
+                                .setAutoCancel(true)
+                                .setOngoing(false)
+                                .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+
+                notificationManager.notify(nNotiId, notificationBuilder.build());
+            }
         }
 
 

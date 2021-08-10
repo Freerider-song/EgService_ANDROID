@@ -28,6 +28,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -36,6 +38,8 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
     private ListViewInfinite m_lvNotice;
 
     private NoticeAdapter m_NoticeAdapter;
+
+    public String DateRef;
 
     private class NoticeViewHolder {
         public ConstraintLayout m_clAreaRoot;
@@ -93,25 +97,40 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
 
             final CaNotice notice = CaApplication.m_Info.m_alNotice.get(position);
 
-            if (notice.m_bTop) {
-                holder.m_clAreaRoot.setBackground(getDrawable(R.drawable.shape_round_corner_notice_top));
+            if(!notice.m_bNotice){//설문조사일 경우
+                holder.m_clAreaRoot.setBackground(getDrawable(R.drawable.shape_round_corner_survey));
+                if(notice.m_nAnsweredQuestionCount == 0){
+                    holder.m_ivNew.setVisibility(View.VISIBLE);
+                }
+                else{
+                    holder.m_ivNew.setVisibility(View.INVISIBLE);
+                }
+                holder.m_tvTimeCreated.setText(notice.getPeriod());
+                holder.m_tvTitle.setText(notice.m_strTitle);
+                holder.m_ivNoticeType.setImageDrawable(getDrawable(R.drawable.survey));
             }
-            else {
-                holder.m_clAreaRoot.setBackground(getDrawable(R.drawable.shape_round_corner_notice_normal));
-            }
+            else{//공지사항일 경우
+                if (notice.m_bTop) {
+                    holder.m_clAreaRoot.setBackground(getDrawable(R.drawable.shape_round_corner_notice_top));
+                }
+                else {
+                    holder.m_clAreaRoot.setBackground(getDrawable(R.drawable.shape_round_corner_notice_normal));
+                }
 
-            if (notice.m_nWriterType==1) {
-                holder.m_ivNoticeType.setImageDrawable(getDrawable(R.drawable.notice_site));
-            }
-            else {
-                holder.m_ivNoticeType.setImageDrawable(getDrawable(R.drawable.notice_eg));
-            }
+                if (notice.m_nWriterType==1) {
+                    holder.m_ivNoticeType.setImageDrawable(getDrawable(R.drawable.notice_site));
+                }
+                else {
+                    holder.m_ivNoticeType.setImageDrawable(getDrawable(R.drawable.notice_eg));
+                }
 
-            holder.m_tvTitle.setText(notice.m_strTitle);
-            holder.m_tvTimeCreated.setText(notice.getTimeCreated());
+                holder.m_tvTitle.setText(notice.m_strTitle);
+                holder.m_tvTimeCreated.setText(notice.getTimeCreated());
 
-            if (notice.m_bRead) holder.m_ivNew.setVisibility(View.INVISIBLE);
-            else holder.m_ivNew.setVisibility(View.VISIBLE);
+                if (notice.m_bRead) holder.m_ivNew.setVisibility(View.INVISIBLE);
+                else holder.m_ivNew.setVisibility(View.VISIBLE);
+
+            }
 
             return convertView;
         }
@@ -123,6 +142,10 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
         setContentView(R.layout.activity_notice_list);
 
         prepareDrawer();
+
+        DateRef = new SimpleDateFormat("yyyyMMdd").format(new Date());
+
+        CaApplication.m_Engine.GetSurveyListForMember(CaApplication.m_Info.m_nSeqMember, DateRef, this,this);
 
         m_lvNotice=findViewById(R.id.lv_notice_list);
 
@@ -143,15 +166,29 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
                 Log.i("ListNotice", "Item clicked, pos="+position);
 
                 CaNotice notice=CaApplication.m_Info.m_alNotice.get(position);
-                notice.m_bRead=true;
-                notice.m_bReadStateChanged=true;
-                notice.m_dtRead= Calendar.getInstance().getTime();
-                m_NoticeAdapter.notifyDataSetChanged();
+                if(notice.m_bNotice){
+                    notice.m_bRead=true;
+                    notice.m_bReadStateChanged=true;
+                    notice.m_dtRead= Calendar.getInstance().getTime();
+                    m_NoticeAdapter.notifyDataSetChanged();
 
-                Intent it = new Intent(This, ActivityNotice.class);
-                it.putExtra("position", position);
+                    Intent it = new Intent(This, ActivityNotice.class);
+                    it.putExtra("position", position);
 
-                startActivity(it);
+                    startActivity(it);
+                }
+                else{
+                    if(notice.m_nAnsweredQuestionCount ==0) {
+                        Log.i("ListSurvey", "Item clicked, pos=" + position);
+                        Intent it = new Intent(This, ActivitySurvey.class);
+                        it.putExtra("position", position);
+                        m_NoticeAdapter.notifyDataSetChanged();
+                        startActivity(it);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "이미 응답한 설문입니다.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
             }
         });
 
@@ -236,6 +273,23 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
         }
 
         switch (Result.m_nCallback) {
+            case CaEngine.KS_GET_SURVEY_LIST_FOR_MEMBER: {
+                Log.i("SurveyList", "Result of GetSurveyList received...");
+
+                try {
+                    JSONObject jo = Result.object;
+                    JSONArray ja = jo.getJSONArray("list_survey");
+
+                    Log.i("SurveyList", "ja length=" + ja.length());
+
+                    CaApplication.m_Info.setSurveyList(ja);
+                    m_NoticeAdapter.notifyDataSetChanged();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            break;
             case CaEngine.CB_GET_NOTICE_LIST: {
                 Log.i("NoticeList", "Result of GetNoticeList received...");
 

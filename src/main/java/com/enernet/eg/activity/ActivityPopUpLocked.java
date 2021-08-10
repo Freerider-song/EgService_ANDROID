@@ -7,12 +7,14 @@ import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.enernet.eg.R;
 import com.enernet.eg.ServicePush;
 import com.mikepenz.fastadapter.listeners.OnClickListener;
@@ -22,7 +24,9 @@ public class ActivityPopUpLocked extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //PopUp의 Title을 제거
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_pop_up_locked);
         // 화면이 잠겨있을 때 보여주기
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
@@ -34,13 +38,15 @@ public class ActivityPopUpLocked extends BaseActivity {
                 // 화면 켜기
 
                 | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
-        setContentView(R.layout.activity_pop_up_locked);
+
 
 
         TextView tvContent = (TextView)findViewById(R.id.tv_push_content);
         tvContent.setText(getIntent().getStringExtra("content"));
         ImageView ivPush = (ImageView)findViewById(R.id.iv_push_image);
-        ivPush.setImageBitmap(ServicePush.getImageFromURL(getIntent().getStringExtra("image")));
+        Glide.with(this).load(getIntent().getStringExtra("image")).into(ivPush);
+
+        //ivPush.setImageBitmap(ServicePush.getImageFromURL(getIntent().getStringExtra("image")));
         Log.i("PopUpLocked", "image url = " + getIntent().getStringExtra("image"));
 
 
@@ -56,7 +62,7 @@ public class ActivityPopUpLocked extends BaseActivity {
 
             case R.id.btn_check: {
                 Log.i("Usage", "Refresh button clicked...");
-                Intent intent = new Intent(ActivityPopUpLocked.this, ActivityLogin.class);
+                Intent intent = new Intent(ActivityPopUpLocked.this, ActivityAlarm.class);
 
                 startActivity(intent);
 

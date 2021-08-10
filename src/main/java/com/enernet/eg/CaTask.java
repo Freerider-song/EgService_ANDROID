@@ -17,6 +17,7 @@ public class CaTask extends AsyncTask<CaArg, Void, CaResult> {
    // private static final String m_strUrlApi  = "https://192.168.100.48:3187/api/";
     private static final String m_strUrlApi  = "https://egservice.co.kr:3187/api/";
 
+
     private IaResultHandler m_ResultHandler;
     private Context m_Context;
     private Dialog m_DialogWait = null;

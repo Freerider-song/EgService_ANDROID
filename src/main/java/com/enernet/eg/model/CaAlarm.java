@@ -23,6 +23,10 @@ public class CaAlarm {
         return (m_nAlarmType==CaEngine.ALARM_TYPE_REQUEST_ACK_MEMBER);
     }
 
+    public boolean isRequestFeedBack(){
+        return (m_nAlarmType==2006);
+    }
+
     public String getTimeCreated() {
         SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return df.format(m_dtCreated);

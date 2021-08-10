@@ -2217,6 +2217,7 @@ drawable shape_round_corner_light_cyan_hollow_2
 drawable shape_round_corner_light_yellow_filled
 drawable shape_round_corner_notice_normal
 drawable shape_round_corner_notice_top
+drawable shape_round_corner_survey
 drawable shape_round_corner_white_filled
 drawable shape_round_corner_white_filled_2
 drawable shape_round_corner_white_filled_3
@@ -2244,6 +2245,7 @@ drawable stamp_2
 drawable stat_sys_download_anim0
 drawable subscribed_main
 drawable subscribed_sub
+drawable survey
 drawable sym_action_add
 drawable tab_middle_back_off
 drawable tab_middle_back_on
@@ -2450,7 +2452,9 @@ id btn_join
 id btn_login
 id btn_logout
 id btn_menu
+id btn_next
 id btn_no
+id btn_prev
 id btn_refresh
 id btn_refresh3
 id btn_reject
@@ -2462,6 +2466,7 @@ id btn_set_discount_info
 id btn_show_kwh
 id btn_show_point_info
 id btn_show_won
+id btn_start
 id btn_start_auth
 id btn_submit
 id btn_usage_daily
@@ -2494,6 +2499,7 @@ id cl1
 id cl2
 id cl3
 id cl4
+id cl_popup_locked
 id cl_site_state_detail
 id clause_outline
 id clear_text
@@ -2533,6 +2539,7 @@ id disableHome
 id dot_cyan
 id dot_yellow
 id dropdown_menu
+id editTextTextPersonName
 id edit_query
 id end
 id enterAlways
@@ -2540,6 +2547,7 @@ id enterAlwaysCollapsed
 id et_alarm_kwh
 id et_alarm_price_level
 id et_alarm_won
+id et_content
 id et_member_id
 id et_name
 id et_password_confirm
@@ -2574,6 +2582,7 @@ id guideline3
 id guideline4
 id guideline5
 id guideline6
+id guideline8
 id guideline_alarm
 id header
 id hideable
@@ -2670,8 +2679,10 @@ id listMode
 id list_item
 id login_btn
 id lv_alarm_list
+id lv_ans
 id lv_family
 id lv_faq_list
+id lv_feedback
 id lv_notice_list
 id lv_qna_list
 id mDate
@@ -2980,6 +2991,9 @@ id tv_discount_family
 id tv_discount_social
 id tv_dong_ho_name
 id tv_empty
+id tv_essential
+id tv_essential_
+id tv_explain
 id tv_gas_delta
 id tv_gas_percent
 id tv_how_to_get
@@ -2998,6 +3012,7 @@ id tv_name
 id tv_noti
 id tv_notice_count
 id tv_page
+id tv_period
 id tv_phone
 id tv_phone_number
 id tv_point
@@ -3006,6 +3021,7 @@ id tv_push_content
 id tv_push_title
 id tv_qna_state
 id tv_question
+id tv_question_num
 id tv_read_day
 id tv_read_period
 id tv_site_name
@@ -3045,6 +3061,7 @@ id usage_area_c
 id useLogo
 id viewGithub
 id view_offset_helper
+id viewpager
 id visible
 id wbAuth
 id website
@@ -3137,6 +3154,8 @@ layout activity_splash
 layout activity_subscribe
 layout activity_subscribed_main
 layout activity_subscribed_sub
+layout activity_survey
+layout activity_survey_content
 layout activity_test
 layout activity_usage
 layout activity_usage_daily
@@ -3169,11 +3188,13 @@ layout dialog01yn
 layout dialog02
 layout dialog_alarm
 layout dialog_alarm_ack
+layout dialog_alarm_feedback
 layout dialog_logout
 layout eg_list_header_family
 layout eg_list_item_alarm
 layout eg_list_item_family
 layout eg_list_item_faq
+layout eg_list_item_feedback
 layout eg_list_item_notice
 layout eg_list_item_qna
 layout eg_spinner_item_style
@@ -3242,6 +3263,8 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout question_layout
+layout question_layout_text
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

@@ -1,5 +1,6 @@
 package com.enernet.eg.activity;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -71,7 +73,8 @@ public class ActivityLogin extends BaseActivity implements IaResultHandler {
 
 		m_etUserId = findViewById(R.id.input_id);
 		m_etPassword = findViewById(R.id.input_pw);
-		
+
+
 		TextView basicVer = findViewById(R.id.basic_version) ;
 		basicVer.setText(getVersion());
 
@@ -95,6 +98,11 @@ public class ActivityLogin extends BaseActivity implements IaResultHandler {
 		Log.i("TAG", "Kwh="+strKwh+", Won="+strWon);
 
 		getPushId();
+
+		String bDrawOverlays = m_Pref.getValue(CaPref.PREF_DRAW_OVERLAYS, "true");
+		if(bDrawOverlays == "true"){
+			startOverlayWindowService(m_Context);
+		}
 
 
 	}
@@ -193,31 +201,6 @@ public class ActivityLogin extends BaseActivity implements IaResultHandler {
 
 		case R.id.btn_join: {
 
-			// for test
-			//Intent nextIntent = new Intent(this, ActivityAuth.class);
-			//startActivity(nextIntent);
-
-			// for test
-			//CaApplication.m_Info.m_bSubscribingAsMainMember = false;
-			//CaApplication.m_Info.m_nSeqAptHoSubscribing = 128;
-			//CaApplication.m_Info.m_strMemberNameSubscribing = "박개동";
-			//CaApplication.m_Info.m_strPhoneSubscribing = "01026007859";
-
-			// for test
-			//Intent nextIntent = new Intent(this, ActivitySubscribe.class);
-			//startActivity(nextIntent);
-
-			// for test
-			//		Intent nextIntent = new Intent(this, ActivitySubscribedMain.class);
-			//		startActivity(nextIntent);
-
-			// for test
-			//		Intent nextIntent = new Intent(this, ActivitySubscribedSub.class);
-			//		startActivity(nextIntent);
-
-			// for test
-			//Intent nextIntent = new Intent(this, ActivityAck.class);
-			//startActivity(nextIntent);
 
 			// real process
 			Intent it = new Intent(this, ActivityCandidate.class);
@@ -236,6 +219,34 @@ public class ActivityLogin extends BaseActivity implements IaResultHandler {
 			startActivity(it);
 		}
 		break;
+
+		}
+	}
+
+	public void startOverlayWindowService(final Context context) {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
+				&& !Settings.canDrawOverlays(context)) {
+
+			AlertDialog.Builder dlg = new AlertDialog.Builder(ActivityLogin.this);
+			dlg.setTitle("요청"); //제목
+			dlg.setMessage("다른 앱 위에 표시되는 권한 앱 요청에 동의해주셔야 정상적으로 이용 가능합니다."); // 메시지
+
+			dlg.setNegativeButton("취소",new DialogInterface.OnClickListener(){
+				public void onClick(DialogInterface dialog, int which) {
+					Toast.makeText(context, "다른 앱 위에 표시되는 권한 앱 요청이 거부되었습니다.", Toast.LENGTH_LONG).show();
+					m_Pref.setValue(CaPref.PREF_DRAW_OVERLAYS, "false");
+				}
+			});
+
+			dlg.setPositiveButton("확인",new DialogInterface.OnClickListener(){
+				public void onClick(DialogInterface dialog, int which) {
+					Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()));
+					startActivity(intent);
+				}
+			});
+
+			dlg.show();
+
 
 		}
 	}

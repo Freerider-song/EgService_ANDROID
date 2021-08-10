@@ -183,6 +183,7 @@ public class ActivityCandidate extends BaseActivity implements IaResultHandler {
 
                         }
 
+
                         @Override
                         public void onNothingSelected(AdapterView<?> arg0) {
 

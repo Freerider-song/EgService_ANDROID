@@ -1,6 +1,7 @@
 package com.enernet.eg;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -54,6 +55,11 @@ public class CaEngine {
 	public static final int CB_GET_SITE_USAGE_FRONT = 1042;
 	public static final int CB_GET_SITE_DAILY_USAGE = 1043;
 
+	public static final int KS_GET_SURVEY_LIST_FOR_MEMBER = 1044;
+	public static final int KS_GET_SURVEY_INFO = 1045;
+	public static final int KS_INSERT_ANSWER_ITEM_LIST = 1046;
+	public static final int KS_INSERT_ANSWER_STRING = 1047;
+
 	public static final String[] NO_CMD_ARGS = new String[]{};
 
 	public static final int ALARM_TYPE_UNKNOWN = 0;
@@ -66,6 +72,7 @@ public class CaEngine {
 	public static final int ALARM_TYPE_NOTI_PRICE_LEVEL = 1103;
 	public static final int ALARM_TYPE_NOTI_USAGE = 1104;
 	public static final int ALARM_TYPE_NOTI_TRANS = 1110; // 변압기
+	public static final int ALARM_TYPE_NOTI_FEEDBACK = 1120; //피드백 관련 알림 타입
 
 	public static final int AUTH_TYPE_UNKNOWN = 1000;
 	public static final int AUTH_TYPE_SUBSCRIBE = 1001;
@@ -107,6 +114,25 @@ public class CaEngine {
 
 		return Result;
 	}
+
+	public final CaResult executeCommand2(CaArg Arg, final int nCallMethod, final boolean bSync, final boolean bShowWaitDialog, Context Ctx, IaResultHandler ResultHandler) {
+
+		CaTask2 Task = new CaTask2(nCallMethod, bShowWaitDialog, Ctx, ResultHandler);
+		Task = (CaTask2) Task.execute(Arg);
+
+		CaResult Result = null;
+
+		if (bSync) {
+			try {
+				Result = Task.get();
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+
+		return Result;
+	}
+
 
 	public void GetMemberInfo(final int nSeqMember, Context Ctx, IaResultHandler ResultHandler) {
 		CaArg Arg = new CaArg("GetMemberInfo", NO_CMD_ARGS, null);
@@ -471,6 +497,40 @@ public class CaEngine {
 
 		executeCommand(Arg, CB_GET_SITE_DAILY_USAGE, false, true, Ctx, ResultHandler);
 	}
+
+	public void GetSurveyListForMember(final int SeqMember, final String DateRef, Context Ctx, IaResultHandler ResultHandler){
+		CaArg Arg = new CaArg("GetSurveyListForMember", NO_CMD_ARGS, null);
+		Arg.addArg("SeqMember", SeqMember);
+		Arg.addArg("DateRef", DateRef);
+
+		executeCommand2(Arg, KS_GET_SURVEY_LIST_FOR_MEMBER, false, true, Ctx,ResultHandler);
+	}
+
+	public void GetSurveyInfo(final int SeqSurvey, Context Ctx, IaResultHandler ResultHandler){
+		CaArg Arg = new CaArg("GetSurveyInfo", NO_CMD_ARGS, null);
+		Arg.addArg("SeqSurvey", SeqSurvey);
+
+		executeCommand2(Arg, KS_GET_SURVEY_INFO, false, true, Ctx,ResultHandler);
+	}
+
+	public void InsertAnswerItemList(final int SeqMember, final int SeqQuestion, final ArrayList<Integer> SeqItemList, Context Ctx, IaResultHandler ResultHandler){
+		CaArg Arg = new CaArg("InsertAnswerItemList", NO_CMD_ARGS, null);
+		Arg.addArg("SeqMember", SeqMember);
+		Arg.addArg("SeqQuestion", SeqQuestion);
+		Arg.addArg("SeqItemList", SeqItemList);
+
+		executeCommand2(Arg, KS_INSERT_ANSWER_ITEM_LIST, false, true, Ctx, ResultHandler);
+	}
+
+	public void InsertAnswerString(final int SeqMember, final int SeqQuestion, final String Answer, Context Ctx, IaResultHandler ResultHandler){
+		CaArg Arg = new CaArg("InsertAnswerString", NO_CMD_ARGS, null);
+		Arg.addArg("SeqMember", SeqMember);
+		Arg.addArg("SeqQuestion", SeqQuestion);
+		Arg.addArg("Answer", Answer);
+
+		executeCommand2(Arg, KS_INSERT_ANSWER_STRING, false, true, Ctx, ResultHandler);
+	}
+
 
 	public static HashMap<String, String> parseBasicResult(final CaResult Result) {
 		if (Result == null) return null;

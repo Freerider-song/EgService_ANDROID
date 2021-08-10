@@ -20,8 +20,10 @@ import android.widget.Toast;
 import com.enernet.eg.CaApplication;
 import com.enernet.eg.CaEngine;
 import com.enernet.eg.CaResult;
+import com.enernet.eg.EgDialog;
 import com.enernet.eg.EgDialogAlarm;
 import com.enernet.eg.EgDialogAlarmAck;
+import com.enernet.eg.EgDialogFeedback;
 import com.enernet.eg.IaResultHandler;
 import com.enernet.eg.R;
 import com.enernet.eg.StringUtil;
@@ -37,6 +39,7 @@ public class ActivityAlarm extends BaseActivity implements IaResultHandler {
 
     private EgDialogAlarm m_dlgAlarm;
     private EgDialogAlarmAck m_dlgAlarmAck;
+    private EgDialogFeedback m_dlgFeedback;
 
     private AlarmAdapter m_AlarmAdapter;
 
@@ -226,6 +229,42 @@ public class ActivityAlarm extends BaseActivity implements IaResultHandler {
                     });
 
                     m_dlgAlarmAck.show();
+                }
+
+                else if(alarm.isRequestFeedBack()){
+                    View.OnClickListener LsnYes = new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Log.i("Setting", "승인 button clicked...");
+                            m_dlgFeedback.dismiss();
+
+                            //ResponseAckMemberInActivityAlarm(nSeqMemberAckRequester, 1);
+                        }
+                    };
+
+                    View.OnClickListener LsnNo = new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Log.i("Setting", "거절 button clicked...");
+                            m_dlgFeedback.dismiss();
+
+                            //ResponseAckMemberInActivityAlarm(nSeqMemberAckRequester, 2);
+                        }
+                    };
+
+                    m_dlgFeedback = new EgDialogFeedback(This, alarm, LsnYes, LsnNo);
+                    m_dlgFeedback.setOnKeyListener(new DialogInterface.OnKeyListener() {
+                        @Override
+                        public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                            if (keyCode==KeyEvent.KEYCODE_BACK) {
+                                dialog.dismiss();
+                                return true;
+                            }
+                            return false;
+                        }
+                    });
+
+                    m_dlgFeedback.show();
                 }
                 else {
                     View.OnClickListener LsnConfirm = new View.OnClickListener() {

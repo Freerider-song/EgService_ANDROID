@@ -30,6 +30,7 @@ public class CaPref {
 	public static final String PREF_CHARGE_OVER_YN		= "useChargeYn";
 	public static final String PREF_CHARGE_OVER_VALUE	= "usechargeValue";
 	public static final String PREF_READ_DAY			= "readDay";
+	public static final String PREF_DRAW_OVERLAYS = "true";
 
 	///////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////

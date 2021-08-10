@@ -387,6 +387,40 @@ public class CaInfo {
         }
     }
 
+    public void setSurveyList(JSONArray ja) {
+
+       /* for (CaNotice notice : m_alNotice) {
+            if (notice.m_bNotice) continue;
+            else{
+                m_alNotice.remove(notice);
+            }
+        }*/
+
+        try {
+            for (int i=0; i<ja.length(); i++) {
+                CaNotice survey = new CaNotice();
+                JSONObject joSurvey = ja.getJSONObject(i);
+
+                survey.m_nSeqSurvey = joSurvey.getInt("seq_survey");
+                survey.m_strTitle = joSurvey.getString("survey_title");
+                survey.m_strExplain = joSurvey.getString("survey_content");
+
+                SimpleDateFormat beforeFormat = new SimpleDateFormat("yyyyMMdd");
+
+                survey.m_dtStart = beforeFormat.parse(joSurvey.getString("time_begin"));
+                survey.m_dtEnd = beforeFormat.parse(joSurvey.getString("time_end"));
+                survey.m_bNotice = false;
+                survey.m_nAnsweredQuestionCount = joSurvey.getInt("answered_question_count");
+
+                m_alNotice.add(0, survey);
+            }
+
+        }
+        catch (JSONException | ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
     public CaNotice findNotice(int nSeqNotice) {
 
         for (CaNotice notice : m_alNotice) {
@@ -422,6 +456,7 @@ public class CaInfo {
                 notice.m_strContent=joNotice.getString("content");
                 notice.m_bTop=true;
                 notice.m_dtCreated=parseDate(joNotice.getString("time_created"));
+                notice.m_bNotice = true;
 
                 String strTimeRead=joNotice.getString("time_read");
                 Log.i("NoticeTopList", "strTimeRead="+strTimeRead);
@@ -466,6 +501,7 @@ public class CaInfo {
                 notice.m_strContent=joNotice.getString("content");
                 notice.m_bTop=false;
                 notice.m_dtCreated=parseDate(joNotice.getString("time_created"));
+                notice.m_bNotice = true;
 
                 String strTimeRead=joNotice.getString("time_read");
                 Log.i("NoticeList", "strTimeRead="+strTimeRead);
