@@ -389,17 +389,25 @@ public class CaInfo {
 
     public void setSurveyList(JSONArray ja) {
 
-       /* for (CaNotice notice : m_alNotice) {
-            if (notice.m_bNotice) continue;
-            else{
-                m_alNotice.remove(notice);
-            }
-        }*/
+        ArrayList<CaNotice> alNormal=new ArrayList<>();
 
+        int nTop = 0;
+        for (CaNotice notice : m_alNotice) {
+            if (!notice.m_bNotice) continue;
+            alNormal.add(notice);
+        }
+
+        m_alNotice.clear();
+        for (CaNotice notice : alNormal) {
+            if(notice.m_bTop) {
+                nTop++;
+            }
+            m_alNotice.add(notice);
+        }
         try {
             for (int i=0; i<ja.length(); i++) {
                 CaNotice survey = new CaNotice();
-                JSONObject joSurvey = ja.getJSONObject(i);
+                JSONObject joSurvey = ja.getJSONObject(ja.length()-i-1);
 
                 survey.m_nSeqSurvey = joSurvey.getInt("seq_survey");
                 survey.m_strTitle = joSurvey.getString("survey_title");
@@ -412,8 +420,9 @@ public class CaInfo {
                 survey.m_bNotice = false;
                 survey.m_nAnsweredQuestionCount = joSurvey.getInt("answered_question_count");
 
-                m_alNotice.add(0, survey);
+                m_alNotice.add(nTop, survey);
             }
+
 
         }
         catch (JSONException | ParseException e) {

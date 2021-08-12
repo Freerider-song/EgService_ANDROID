@@ -11,7 +11,7 @@ public class CaNotice {
 	public String m_strContent="";
 	public boolean m_bTop=false;
 	public int m_nWriterType=1; // 1=아파트관리자, 2=에너넷
-	public boolean m_bNotice = true;
+	public boolean m_bNotice = false;
 
 	public Date m_dtCreated=null;
 	public Date m_dtRead=null;

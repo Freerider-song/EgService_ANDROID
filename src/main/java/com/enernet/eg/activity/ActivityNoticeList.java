@@ -98,6 +98,7 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
             final CaNotice notice = CaApplication.m_Info.m_alNotice.get(position);
 
             if(!notice.m_bNotice){//설문조사일 경우
+                Log.i("NoticeList", "설문조사 제목" + notice.m_strTitle);
                 holder.m_clAreaRoot.setBackground(getDrawable(R.drawable.shape_round_corner_survey));
                 if(notice.m_nAnsweredQuestionCount == 0){
                     holder.m_ivNew.setVisibility(View.VISIBLE);
@@ -110,6 +111,7 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
                 holder.m_ivNoticeType.setImageDrawable(getDrawable(R.drawable.survey));
             }
             else{//공지사항일 경우
+                Log.i("NoticeList", "공지사항 제목" + notice.m_strTitle);
                 if (notice.m_bTop) {
                     holder.m_clAreaRoot.setBackground(getDrawable(R.drawable.shape_round_corner_notice_top));
                 }
@@ -145,7 +147,7 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
 
         DateRef = new SimpleDateFormat("yyyyMMdd").format(new Date());
 
-        CaApplication.m_Engine.GetSurveyListForMember(CaApplication.m_Info.m_nSeqMember, DateRef, this,this);
+        //CaApplication.m_Engine.GetSurveyListForMember(CaApplication.m_Info.m_nSeqMember, DateRef, this,this);
 
         m_lvNotice=findViewById(R.id.lv_notice_list);
 
@@ -166,7 +168,7 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
                 Log.i("ListNotice", "Item clicked, pos="+position);
 
                 CaNotice notice=CaApplication.m_Info.m_alNotice.get(position);
-                if(notice.m_bNotice){
+                if(notice.m_bNotice){ //공지사항일 경우
                     notice.m_bRead=true;
                     notice.m_bReadStateChanged=true;
                     notice.m_dtRead= Calendar.getInstance().getTime();
@@ -193,6 +195,7 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
         });
 
     }
+
 
     public void setNoticeReadStateToDb() {
         String strSeqNoticeList = CaApplication.m_Info.getNoticeReadListString();
@@ -221,6 +224,7 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
         super.onResume();
 
         setNoticeCount();
+        CaApplication.m_Engine.GetSurveyListForMember(CaApplication.m_Info.m_nSeqMember, DateRef, this,this);
 
         m_NoticeAdapter.notifyDataSetChanged();
     }
@@ -259,6 +263,7 @@ public class ActivityNoticeList extends BaseActivity implements IaResultHandler,
                 Log.i("NoticeList", "btn_refresh clicked...strTimeMax="+strTimeMax);
 
                 CaApplication.m_Engine.GetNoticeList(CaApplication.m_Info.m_nSeqMember, strTimeMax, CaInfo.DEFAULT_REQUEST_NOTICE_COUNT, this, this);
+                CaApplication.m_Engine.GetSurveyListForMember(CaApplication.m_Info.m_nSeqMember, DateRef, this,this);
             }
             break;
         }
